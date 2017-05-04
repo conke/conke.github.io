@@ -1,6 +1,3 @@
-[Home](/)
-
-# ArchLinux系统安装
 [点击此处可加入相关讨论群](https://jq.qq.com/?_wv=1027&k=477ADMC)。
 本文在ArchLinux with Gnome环境上撰写。
 <br/>
@@ -535,5 +532,3 @@ ls /mnt/hgfs
 ```bash
 sed -i 's/^#\(Waylang\)\1/' /etc/gdm/custom.conf
 ```
-
-[Home](/)
