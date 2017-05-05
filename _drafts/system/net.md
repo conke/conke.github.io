@@ -32,9 +32,9 @@
 
 Protocol | Port | Host | Comments
 ---------|------|------|---------
-SSH | 22 | All | 
-RDP | 3389 | Windows | 
-VNC | 5900 | All | 
+SSH | 22 | All |
+RDP | 3389 | Windows |
+VNC | 5900 | All |
 X11 | 6000 | Unix | ?
 
 ### 1.2. SSH
@@ -80,3 +80,36 @@ linux: vinagre
 #### 1.5.1. Server (Unix-like only)
 
 #### 1.5.2. Client
+
+
+## VPN
+```bash
+/usr/lib/networkmanager/nm-l2tp-service --debug
+```
+
+## modify the host name
+
+_Windows_
+```PowerShell
+?
+```
+
+_Linux_
+```bash
+hostnamectl
+```
+
+_macOS_
+
+```
+scutil –-set HostName localhost
+```
+
+## network utilities
+
+## 远程桌面
+
+## SSH
+
+## References
+- https://en.wikipedia.org/wiki/Iproute2

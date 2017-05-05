@@ -92,7 +92,7 @@ demo/demo.inf:
 
 ```
 
-在MdeModulePkg/MdeModulePkg.dsc的[Components]段落末尾加上：
+在MdeModulePkg/MdeModulePkg.dsc的\[Components\]段落末尾加上：
 ```
 demo/demo.inf
 ```
