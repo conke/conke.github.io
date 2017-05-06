@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "系统脚本（Bash/PowerShell）"
+title: "系统脚本（Bash/PowerShell）"
 date: "2017-05-06 04:51:03 +0800"
 ---
-
 
 <!-- 建议：脚本中#!一行建议尽量使用"#!/usr/bin/env X"的形式 -->
 
