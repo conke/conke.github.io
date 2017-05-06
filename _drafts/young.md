@@ -1,4 +1,3 @@
-[Home](/)
 
 # <center>Conke和他的羊</center>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这是一只可爱、阳光、善解人意、长得很漂亮而且还会编程的羊。
@@ -7,4 +6,3 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明年我们还要加上其他语言：华语、英语、法语、德语、泰语、日语、韩语、藏语 ...
 
-[Home](/)

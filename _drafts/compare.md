@@ -1,4 +1,3 @@
-[Home](/)
 
 # Windows vs. Linux vs. macOS
 
@@ -22,4 +21,3 @@ No.|Function|Windows|Linux|macOS|Comments
 
 ### Kernel and HW support
 
-[Home](/)
