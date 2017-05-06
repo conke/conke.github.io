@@ -1,27 +1,27 @@
 ---
 layout: post
-title: "计算机程序设计：系统脚本"
+title: "系统脚本（Bash/PowerShell）"
 date: "2017-05-06 04:51:03 +0800"
 ---
 
 
-建议：脚本中#!一行建议尽量使用"#!/usr/bin/env X"的形式
+<!-- 建议：脚本中#!一行建议尽量使用"#!/usr/bin/env X"的形式 -->
 
-## Regular Expressions
+# 1. Regular Expressions
 
-## 文件系统：文件与目录操作
+# 2. 文件系统：文件与目录操作
 
-### 需求
+## 2.1. 需求
 有如下文件，要求把“[]”及所包含的字符串删除
 ```
 [电影天堂]111.rmvb
 [盗版网站]22.mkv
 ...
 ```
-### Bash
-```
-for fn in `ls`
-do
+## 2.2. Bash
+
+```bash
+for fn in `ls`; do
   fm="${fn/\[*\]/}"
   if [ "$fm" != "$fn" ]; then
     mv -v "$fn" "$fm"
@@ -29,8 +29,9 @@ do
 done
 ```
 
-### PowerShell
-```
+## 2.3. PowerShell
+
+```powershell
 foreach ($fn in Get-ChildItem) {
     $fn = $fn.Name
     $fm = $fn -replace "\[.*\]", ""
@@ -40,21 +41,21 @@ foreach ($fn in Get-ChildItem) {
 }
 ```
 
-## NATS
+# 3. NATS
 
 http://nats.io/about/
 
 ![demo](http://latex.codecogs.com/gif.latex?Fib(n)=\frac{\left(\phi^{n}-\gamma^{n}\right)}{\sqrt{5}})
 
-# 系统脚本应用示例
+# 4. 系统脚本应用示例
 
-## VMWare自动启动
+# 5. VMWare自动启动
 
-### 需求
+## 5.1. 需求
 Windows启动时自动打开某个路径下的所有vmware虚拟机。
 注意，需要考虑到该路径下的虚拟机可能会发生变化（增删）
 
-### PowerShell脚本
+## 5.2. PowerShell脚本
 vm-launch.ps1
 ```powershell
 $vmdk = "d:\vmdk"
@@ -72,10 +73,10 @@ foreach ($dir in Get-ChildItem $vmdk) {
 }
 ```
 
-### 自动启动
+## 5.3. 自动启动
 在regedit的run中新建一REG_SZ，值为"powershell -File \path\to\vm-launch.ps1"
 
-## 环境变量 (Windows)
+# 6. 环境变量 (Windows)
 for current login:
 ```powershell
 [System.Environment]::SetEnvironmentVariable("A", "1", "User");
@@ -90,4 +91,4 @@ for all users (run as administrator):
 [System.Environment]::GetEnvironmentVariable("B", "Machine");
 ```
 
-### genfstab for Gentoo
+## 6.1. genfstab for Gentoo

@@ -1,62 +1,44 @@
 ---
 layout: post
-title: "Programming Build Tools"
-date: "2017-05-06 04:48:57 +0800"
+title: "计算机程序设计：Build工具"
+date: "2017-04-30 04:48:57 +0800"
 ---
-
 
 <!-- TOC -->
 
-    - [1. Demo](#1-demo)
-        - [1.1. perl](#1-1-perl)
-    - [2. Installation](#2-installation)
-        - [2.1. C/C++](#2-1-c-c)
-            - [3.1.1. conan](#3-1-1-conan)
-        - [2.2. PHP](#2-2-php)
-        - [2.3. Python](#2-3-python)
-    - [Build Tools](#build-tools)
-        - [Java: Maven](#java-maven)
-    - [3. Package Management](#3-package-management)
-        - [3.2. Search](#3-2-search)
-        - [3.3. Install/Remove](#3-3-install-remove)
-            - [3.3.1. pip](#3-3-1-pip)
-            - [3.3.2. cpan](#3-3-2-cpan)
-        - [3.4. upgrade](#3-4-upgrade)
-    - [4. 多版本共存问题](#4)
-        - [4.1. Demo](#4-1-demo)
-            - [4.1.1. Python](#4-1-1-python)
-        - [4.2. Python](#4-2-python)
-        - [4.3. Ruby: RVM](#4-3-ruby-rvm)
-        - [4.4. PHP?](#4-4-php)
-        - [4.5. Perl?](#4-5-perl)
-- [打包与发布](#)
-        - [4.6. Java: jar & war](#4-6-java-jar-war)
-        - [4.7. Python: wheel](#4-7-python-wheel)
-    - [5. Porting](#5-porting)
-        - [5.1. GCC cross-compiling](#5-1-gcc-cross-compiling)
-        - [5.2. Go cross-compiling](#5-2-go-cross-compiling)
-        - [5.3. Rust cross-compiling](#5-3-rust-cross-compiling)
-    - [6. Build Compiler/VM/Intepretor](#6-build-compiler-vm-intepretor)
-    - [Unit Test](#unit-test)
+- [1. Installation](#1-installation)
+    - [1.1. C/C++](#1-1-c-c)
+        - [1.1.1. conan](#1-1-1-conan)
+    - [1.2. PHP](#1-2-php)
+    - [1.3. Python](#1-3-python)
+- [2. Build Tools](#2-build-tools)
+    - [2.1. Java: Maven](#2-1-java-maven)
+- [3. Package Management](#3-package-management)
+    - [3.1. Search](#3-1-search)
+    - [3.2. Install/Remove](#3-2-install-remove)
+        - [3.2.1. pip](#3-2-1-pip)
+        - [3.2.2. cpan](#3-2-2-cpan)
+    - [3.3. upgrade](#3-3-upgrade)
+- [4. 多版本共存问题](#4)
+    - [4.1. Demo](#4-1-demo)
+        - [4.1.1. Python](#4-1-1-python)
+    - [4.2. Python](#4-2-python)
+    - [4.3. Ruby: RVM](#4-3-ruby-rvm)
+    - [4.4. PHP?](#4-4-php)
+    - [4.5. Perl?](#4-5-perl)
+- [5. 打包与发布](#5)
+    - [5.1. Java: jar & war](#5-1-java-jar-war)
+    - [5.2. Python: wheel](#5-2-python-wheel)
 
 <!-- /TOC -->
 
-## 1. Demo
+# 1. Installation
 
-### 1.1. perl
+## 1.1. C/C++
 
-```perl
-my $now = localtime();
-print "current time is $now.";
-```
+### 1.1.1. conan
 
-## 2. Installation
-
-### 2.1. C/C++
-
-#### 3.1.1. conan
-
-### 2.2. PHP
+## 1.2. PHP
 
 Windows
 
@@ -82,30 +64,30 @@ mkdir -p $HOME/.composer/vendor/bin
 echo 'export PATH=$PATH:$HOME/.composer/vendor/bin' >> .bashrc
 ```
 
-### 2.3. Python
+## 1.3. Python
 
 
-## Build Tools
+# 2. Build Tools
 
-### Java: Maven
+## 2.1. Java: Maven
 
 ```bash
 mvn exec:java -Dexec.mainClass=$class
 ```
 
-## 3. Package Management
+# 3. Package Management
 
-### 3.2. Search
+## 3.1. Search
 
-### 3.3. Install/Remove
+## 3.2. Install/Remove
 
-#### 3.3.1. pip
+### 3.2.1. pip
 
 据[官方文档](https://pip.pypa.io/en/latest/installing)说python 2.7.9+/3.4+都内建支持pip
 
 疑惑：我在CentOS和Ubuntu两种系统上测试，结果都是“否”。难道仅指"import pip"？
 
-#### 3.3.2. cpan
+### 3.2.2. cpan
 
 install perl-CGI module
 
@@ -132,13 +114,13 @@ print "$CGI::VERSION";
 print header;
 ```
 
-### 3.4. upgrade
+## 3.3. upgrade
 
-## 4. 多版本共存问题
+# 4. 多版本共存问题
 
-### 4.1. Demo
+## 4.1. Demo
 
-#### 4.1.1. Python
+### 4.1.1. Python
 
 demo.py
 
@@ -150,7 +132,7 @@ info = sys.executable + ': ' + platform.python_version()
 print(info)
 ```
 
-### 4.2. Python
+## 4.2. Python
 
 pyenv(deprecated), venv, virtualenv, virtualenvwrapper, Anaconda
 
@@ -214,31 +196,22 @@ source deactivate
 建议：launch your editor or IDE from inside the virtualenv to inherit the environment configuration
 
 
-### 4.3. Ruby: RVM
+## 4.3. Ruby: RVM
 
-### 4.4. PHP?
+## 4.4. PHP?
 
 http://stackoverflow.com/questions/524508/how-can-one-run-multiple-versions-of-php-5-x-on-a-development-lamp-server
 
 http://askubuntu.com/questions/50344/how-to-have-two-version-of-php-installed-and-switch-easily
 
-### 4.5. Perl?
+## 4.5. Perl?
 
-# 打包与发布
+# 5. 打包与发布
 
-### 4.6. Java: jar & war
+## 5.1. Java: jar & war
 
-### 4.7. Python: wheel
+## 5.2. Python: wheel
 
-## 5. Porting
-
-### 5.1. GCC cross-compiling
-
-### 5.2. Go cross-compiling
-
-### 5.3. Rust cross-compiling
-
-## 6. Build Compiler/VM/Intepretor
 
 [Home](/)
 
