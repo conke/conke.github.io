@@ -7,7 +7,7 @@ date: "2017-05-06 11:43:32 +0800"
 [点击此处可加入相关讨论群](https://jq.qq.com/?_wv=1027&k=477ADMC)。
 本文在ArchLinux with Gnome环境上撰写。
 <br/>
-![](res/archlinux/archlinux.png)
+![](/res/archlinux/archlinux.png)
 
 <!-- TOC -->
 
@@ -164,7 +164,7 @@ echo -e "o\nn\n\n\n\n+4G\nn\n\n\n\n\nw\n" | fdisk /dev/sda (for MBR/DOS partitio
 cfdisk /dev/sda
 ```
 GPT分区结果应该如下所示：
-![part](res/archlinux/part.png)
+![part](/res/archlinux/part.png)
 
 Double check:
 ```bash
@@ -184,7 +184,7 @@ Double check:
 blkid
 ```
 结果应该如下所示：
-![blkid](res/archlinux/blkid.png)
+![blkid](/res/archlinux/blkid.png)
 
 
 ### 2.7. 生成rootfs

@@ -166,7 +166,7 @@ diskutil
 
 ## 3.1. 基本工具
 - https://en.wikipedia.org/wiki/Iproute2
- 
+
 
 ## 3.2. VPN
 ```bash
@@ -275,18 +275,58 @@ Failed to get D-Bus connection
 # 10. Package management
 
 
-operation | apt | yum/dnf | emerge | pacman | yaourt | brew | choco | pkg
-----------|-----|---------|--------|--------|--------|------|-------|-----
-search  
-install/remove  
-list content  
-build from source  
+operation | dpkg/apt-get/apt | rpm/yum/dnf | emerge | pacman/yaourt | brew | choco | pkg
+----------|------------------|-------------|--------|---------------|------|-------|-----
+search
+install/remove
+list content
+build from source
 
 ## Search
+
+### dpkg/apt-get/apt
+
+### rpm/yum/dnf
+
+```bash
+yumdb search from_repo ius python
+```
+
+### emerge
+
+### pacman
+
+### yaourt
+
+### brew
+
+### choco
+
+### pkg
 
 ## Install/remove
 
 ## List content
+
+### dpkg/apt-get/apt
+
+### rpm/yum/dnf
+
+```bash
+rpm -ql postgresql-server
+```
+
+### emerge
+
+### pacman
+
+### yaourt
+
+### brew
+
+### choco
+
+### pkg
 
 ## Build from source
 
