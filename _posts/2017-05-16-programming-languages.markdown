@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "计算机程序设计：语言"
+title: "计算机程序设计：语言篇"
 date: "2017-05-16 12:51:53 +0800"
 ---
 
@@ -18,7 +18,7 @@ date: "2017-05-16 12:51:53 +0800"
 	- [1.4. Directory/Hash/Map/Associative array](#14-directoryhashmapassociative-array)
 	- [1.5. String](#15-string)
 	- [1.6. Date and Time](#16-date-and-time)
-	- [1.7. Preprocessing (C/C++)](#17-preprocessing-cc)
+	- [1.7. Preprocessing](#17-preprocessing)
 - [2. Control statements](#2-control-statements)
 	- [2.1. if](#21-if)
 	- [2.2. switch](#22-switch)
@@ -44,17 +44,17 @@ date: "2017-05-16 12:51:53 +0800"
 		- [3.6.1. Argv[]](#361-argv)
 		- [3.6.2. getopt()](#362-getopt)
 - [4. Class and Object](#4-class-and-object)
-	- [4.1. Structure (C/C++)](#41-structure-cc)
-	- [4.2. Class and encapsulation](#42-class-and-encapsulation)
-		- [4.2.3. Default, Private, public](#423-default-private-public)
-	- [4.3. this and super](#43-this-and-super)
-		- [4.3.1. this for constructor](#431-this-for-constructor)
-	- [4.4. Overload](#44-overload)
-	- [4.5. constructor](#45-constructor)
-	- [4.6. destructor and GC](#46-destructor-and-gc)
-		- [4.6.1. finalize](#461-finalize)
-	- [4.7. static](#47-static)
-	- [4.8. final](#48-final)
+	- [4.1. Class](#41-class)
+		- [4.1.3. property and method](#413-property-and-method)
+		- [4.1.4. Default, Private, public](#414-default-private-public)
+	- [4.2. this and super](#42-this-and-super)
+		- [4.2.1. this for constructor](#421-this-for-constructor)
+	- [4.3. Overload](#43-overload)
+	- [4.4. constructor](#44-constructor)
+	- [4.5. destructor and GC](#45-destructor-and-gc)
+		- [4.5.1. finalize](#451-finalize)
+	- [4.6. static](#46-static)
+	- [4.7. final](#47-final)
 - [5. Inheritance and Polymorphism](#5-inheritance-and-polymorphism)
 	- [5.1. Inherit](#51-inherit)
 		- [5.1.1. super](#511-super)
@@ -134,7 +134,7 @@ date: "2017-05-16 12:51:53 +0800"
 
 ## 1.6. Date and Time
 
-## 1.7. Preprocessing (C/C++)
+## 1.7. Preprocessing
 
 # 2. Control statements
 
@@ -186,27 +186,27 @@ date: "2017-05-16 12:51:53 +0800"
 
 # 4. Class and Object
 
-## 4.1. Structure (C/C++)
+## 4.1. Class
 
-## 4.2. Class and encapsulation
+### 4.1.3. property and method
 
-### 4.2.3. Default, Private, public
+### 4.1.4. Default, Private, public
 
-## 4.3. this and super
+## 4.2. this and super
 
-### 4.3.1. this for constructor
+### 4.2.1. this for constructor
 
-## 4.4. Overload
+## 4.3. Overload
 
-## 4.5. constructor
+## 4.4. constructor
 
-## 4.6. destructor and GC
+## 4.5. destructor and GC
 
-### 4.6.1. finalize
+### 4.5.1. finalize
 
-## 4.7. static
+## 4.6. static
 
-## 4.8. final
+## 4.7. final
 
 # 5. Inheritance and Polymorphism
 

@@ -29,7 +29,7 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
-  - jemoji
+  # - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock
