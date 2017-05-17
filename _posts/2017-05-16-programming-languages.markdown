@@ -19,15 +19,15 @@ date: "2017-05-16 12:51:53 +0800"
 - [2. Control statements](#2-control-statements)
     - [2.1. if](#21-if)
     - [2.2. switch](#22-switch)
-    - [2.4. while](#24-while)
-    - [2.5. for](#25-for)
-    - [2.7. break and continue](#27-break-and-continue)
-    - [2.8. exception](#28-exception)
+    - [2.3. while](#23-while)
+    - [2.4. for](#24-for)
+    - [2.5. break and continue](#25-break-and-continue)
+    - [2.6. exception](#26-exception)
 - [3. Function](#3-function)
     - [3.1. Definition](#31-definition)
-    - [3.5. Recursive](#35-recursive)
-    - [3.2. Callback](#32-callback)
-    - [3.3. Lambda](#33-lambda)
+    - [3.2. Recursive](#32-recursive)
+    - [3.3. Callback](#33-callback)
+    - [3.4. Lambda](#34-lambda)
 - [4. Class and Object](#4-class-and-object)
     - [4.1. Class](#41-class)
     - [4.2. this and super](#42-this-and-super)
@@ -69,7 +69,7 @@ date: "2017-05-16 12:51:53 +0800"
 - [12. Others](#12-others)
     - [12.1. Reserved/Key words](#121-reservedkey-words)
     - [12.2. Comments and docstring](#122-comments-and-docstring)
-    - [Versions and Features](#versions-and-features)
+    - [12.3. Versions and Features](#123-versions-and-features)
 
 <!-- /TOC -->
 
@@ -210,15 +210,15 @@ Python: not support
 
 <!--## 2.3. goto-->
 
-## 2.4. while
+## 2.3. while
 
 practice: Insert, Merge
 
-## 2.5. for
+## 2.4. for
 
-## 2.7. break and continue
+## 2.5. break and continue
 
-## 2.8. exception
+## 2.6. exception
 
 C++/Java/JavaScript in common:
 
@@ -255,15 +255,21 @@ else:
 
 ## 3.1. Definition
 
-### Argument and Return Value
+Python: pass
 
-## 3.5. Recursive
+### 3.1.1. Variable arguments
 
+### 3.1.2. Local and Global (Scope)
 
-## 3.2. Callback
+### 3.1.3. Return Value
 
+object copy or reference?
 
-## 3.3. Lambda
+## 3.2. Recursive
+
+## 3.3. Callback
+
+## 3.4. Lambda
 
 JavaScript:
 
@@ -286,9 +292,9 @@ print(f(3))
 
 ## 4.1. Class
 
-### 4.1.3. property and method
+### 4.1.1. property and method
 
-### 4.1.4. Default, Private, public
+### 4.1.2. Default, Private, public
 
 ## 4.2. this and super
 
@@ -427,5 +433,5 @@ del                 from                not                 while
 
 ## 12.2. Comments and docstring
 
-## Versions and Features
+## 12.3. Versions and Features
 
