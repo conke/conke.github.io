@@ -19,10 +19,8 @@ date: "2017-05-16 12:51:53 +0800"
 - [2. Control statements](#2-control-statements)
     - [2.1. if](#21-if)
     - [2.2. switch](#22-switch)
-    - [2.3. goto](#23-goto)
     - [2.4. while](#24-while)
     - [2.5. for](#25-for)
-    - [2.6. for each](#26-for-each)
     - [2.7. break and continue](#27-break-and-continue)
     - [2.8. exception](#28-exception)
 - [3. Function](#3-function)
@@ -195,25 +193,66 @@ Interation
 
 ## 2.1. if
 
+Java:
+
+case String
+
+JavaScript:
+
+
+
+Python:
+
+elif, <>, in
+
 ## 2.2. switch
 
-## 2.3. goto
+Python not support
+
+<!--## 2.3. goto-->
 
 ## 2.4. while
+
+
 
 practice: Insert, Merge
 
 ## 2.5. for
 
-## 2.6. for each
-
 ## 2.7. break and continue
 
 ## 2.8. exception
 
-### 2.8.1. try … throw … catch … finally
+C++/Java/JavaScript in common:
 
-### 2.8.2. throws
+```java
+try {
+	throw
+} catch () {
+
+} catch () {
+
+} finally {
+
+}
+```
+
+Java: throws
+
+Python:
+
+```python
+try:
+	...
+	raise xxx
+	...
+except ExceptionType, Argument:
+	...
+except ExceptionType1[, ExceptionType2, ...]:
+	...
+else:
+	...
+```
 
 # 3. Function
 
