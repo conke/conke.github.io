@@ -24,12 +24,10 @@ date: "2017-05-16 12:51:53 +0800"
     - [2.7. break and continue](#27-break-and-continue)
     - [2.8. exception](#28-exception)
 - [3. Function](#3-function)
-    - [3.1. Arguments pass: swap()](#31-arguments-pass-swap)
-    - [3.2. Function pointer](#32-function-pointer)
-    - [3.3. Lambda](#33-lambda)
-    - [3.4. Callback](#34-callback)
+    - [3.1. Definition](#31-definition)
     - [3.5. Recursive](#35-recursive)
-    - [3.6. arguments parsing](#36-arguments-parsing)
+    - [3.2. Callback](#32-callback)
+    - [3.3. Lambda](#33-lambda)
 - [4. Class and Object](#4-class-and-object)
     - [4.1. Class](#41-class)
     - [4.2. this and super](#42-this-and-super)
@@ -71,6 +69,7 @@ date: "2017-05-16 12:51:53 +0800"
 - [12. Others](#12-others)
     - [12.1. Reserved/Key words](#121-reservedkey-words)
     - [12.2. Comments and docstring](#122-comments-and-docstring)
+    - [Versions and Features](#versions-and-features)
 
 <!-- /TOC -->
 
@@ -193,13 +192,11 @@ Interation
 
 ## 2.1. if
 
-Java:
-
-case String
-
 JavaScript:
 
-
+```javascript
+===
+```
 
 Python:
 
@@ -207,13 +204,13 @@ elif, <>, in
 
 ## 2.2. switch
 
-Python not support
+Java: case String
+
+Python: not support
 
 <!--## 2.3. goto-->
 
 ## 2.4. while
-
-
 
 practice: Insert, Merge
 
@@ -256,25 +253,34 @@ else:
 
 # 3. Function
 
-## 3.1. Arguments pass: swap()
+## 3.1. Definition
 
-### 3.1.3. by value
-
-### 3.1.4. By address
-
-## 3.2. Function pointer
-
-## 3.3. Lambda
-
-## 3.4. Callback
+### Argument and Return Value
 
 ## 3.5. Recursive
 
-## 3.6. arguments parsing
 
-### 3.6.1. Argv[]
+## 3.2. Callback
 
-### 3.6.2. getopt()
+
+## 3.3. Lambda
+
+JavaScript:
+
+```javascript
+f = (x) => x * x;
+console.log(f(3));
+
+f = (x) => { y = x * x; return y; }
+console.log(f(3));
+```
+
+Python:
+
+```python
+f = lambda x:  x * x
+print(f(3))
+```
 
 # 4. Class and Object
 
@@ -420,4 +426,6 @@ del                 from                not                 while
 
 
 ## 12.2. Comments and docstring
+
+## Versions and Features
 
