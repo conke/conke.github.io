@@ -37,21 +37,18 @@ date: "2017-05-16 12:51:53 +0800"
 - [5. Inheritance and Polymorphism](#5-inheritance-and-polymorphism)
     - [5.1. Inherit](#51-inherit)
     - [5.2. Polymorphism](#52-polymorphism)
-    - [5.3. abstract class](#53-abstract-class)
+    - [5.3. Abstract Class](#53-abstract-class)
     - [5.4. Interface](#54-interface)
 - [6. Generic/Template Class](#6-generictemplate-class)
     - [6.1. <?>](#61-)
 - [7. Collection](#7-collection)
-    - [7.1. Java collection](#71-java-collection)
-    - [7.2. Set](#72-set)
-    - [7.3. List](#73-list)
-    - [7.4. Map](#74-map)
-    - [7.5. Vector](#75-vector)
+    - [7.1. Set](#71-set)
+    - [7.2. List](#72-list)
+    - [7.3. Map](#73-map)
+    - [7.4. Vector](#74-vector)
 - [8. String and Regular Expression](#8-string-and-regular-expression)
     - [8.1. Basic operations](#81-basic-operations)
-    - [8.2. StringBuffer](#82-stringbuffer)
-    - [8.3. StringBuilder](#83-stringbuilder)
-    - [8.4. regular expressions](#84-regular-expressions)
+    - [8.2. regular expressions](#82-regular-expressions)
 - [9. Modular Programming](#9-modular-programming)
     - [9.1. Header](#91-header)
     - [9.2. Static](#92-static)
@@ -60,9 +57,9 @@ date: "2017-05-16 12:51:53 +0800"
     - [9.5. Package](#95-package)
 - [10. Reflection](#10-reflection)
     - [10.1. Class](#101-class)
-    - [10.2. Field](#102-field)
-    - [10.3. Method](#103-method)
-- [11. Annotation](#11-annotation)
+    - [10.2. Properties/Fields](#102-propertiesfields)
+    - [10.3. Methods](#103-methods)
+- [11. Annotations/Decorators](#11-annotationsdecorators)
     - [11.1. Built in: over, dep, warn](#111-built-in-over-dep-warn)
 - [12. Others](#12-others)
     - [12.1. Reserved/Key words](#121-reservedkey-words)
@@ -176,6 +173,17 @@ builtin map() function
 
 Interation
 
+dictionary view:
+
+```python
+m = {'aa': 11, 'bb': 22}
+keys = m.keys()
+
+print(keys, m)
+del m['aa']
+print(keys, m)
+```
+
 ### 1.7.2. CRUD
 
 ## 1.8. Date and Time
@@ -255,7 +263,21 @@ else:
 
 ## 3.1. Definition
 
-Python: pass
+Python:
+
+```python
+def foo(x):
+    return 2 * x
+```
+
+or with type checking:
+
+```python
+def foo(x: int) -> int:
+    return 2 * x
+```
+
+pass
 
 ### 3.1.1. Variable arguments
 
@@ -376,15 +398,17 @@ Python:
 ```python
 x = 11 # static/class property
 
-class Demo:
+class Demo():
     x = 22
 
-    def __init__(self): # object method
+    # object/instance method
+    def __init__(self):
         self.x = 33 # object property
         print(x)
 
+    # static method
 	# add @staticmethod for python 2.x
-    def foo(): # static/class method
+    def foo():
         print(x)
         print(Demo.x)
 
@@ -392,6 +416,17 @@ demo = Demo()
 print(demo.x)
 Demo.foo()
 ```
+
+or:
+
+```python
+# class method
+@classmethod
+def foo(cls):
+    print(x)
+    print(cls.x)
+```
+
 
 comment line 7 and check output again
 
@@ -426,6 +461,26 @@ __del__()
 
 ### 5.1.3. super
 
+Pyton:
+
+```python
+class A:
+    def foo(self):
+        print('A', type(self))
+
+class B(A):
+    def foo(self):
+        print('B', type(self))
+
+class C(B):
+    def foo(self):
+        super().foo() # super(B, self).foo()
+        super(C, self).foo()
+
+c = C()
+c.foo()
+```
+
 ### 5.1.4. protected, default
 
 ### 5.1.5. final
@@ -436,7 +491,39 @@ __del__()
 
 ### 5.2.2. virtual
 
-## 5.3. abstract class
+## 5.3. Abstract Class
+
+Java:
+
+```java
+public class Demo {
+    public abstract void foo();
+}
+```
+
+Python 2.x:
+
+```python
+from abc import ABCMeta, abstractmethod
+
+class Demo(object):
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def foo(self):
+        pass
+```
+
+Python 3.x:
+
+```python
+from abc import ABCMeta, abstractmethod
+
+class Demo(metaclass=ABCMeta):
+    @abstractmethod
+    def foo(self):
+        pass
+```
 
 ## 5.4. Interface
 
@@ -452,33 +539,43 @@ __del__()
 
 # 7. Collection
 
-## 7.1. Java collection
+## 7.1. Set
 
-## 7.2. Set
+## 7.2. List
 
-## 7.3. List
+## 7.3. Map
 
-## 7.4. Map
-
-## 7.5. Vector
+## 7.4. Vector
 
 # 8. String and Regular Expression
 
 ## 8.1. Basic operations
 
-### 8.1.4. Compare
+### 8.1.4. Format
 
-### 8.1.5. Sub string
+Python 3.x:
 
-### 8.1.6. Search and substitution
+```python
+key = 'abc'
+value = 123
+content = f'{key} = {value}'
 
-### 8.1.7. Split and join
+print(content)
+```
 
-## 8.2. StringBuffer
+### 8.1.5. Compare
 
-## 8.3. StringBuilder
+### 8.1.6. Sub string
 
-## 8.4. regular expressions
+### 8.1.7. Search and substitution
+
+### 8.1.8. Split and join
+
+### 8.1.9. StringBuffer
+
+### 8.1.10. StringBuilder
+
+## 8.2. regular expressions
 
 # 9. Modular Programming
 
@@ -498,27 +595,77 @@ __del__()
 
 ## 10.1. Class
 
-### 10.1.2. forName
+### 10.1.2. Get Name
 
-### 10.1.3. getName
+Java: getName
 
-## 10.2. Field
+Python:
 
-### 10.2.1. getFields
+```python
+class Demo:
+    foo = 123
 
-### 10.2.2. getDeclaredFields
+demo = Demo()
+print(type(demo).__name__)
+```
 
-### 10.2.3. Field.get()/set()
+### 10.1.3. from Name
 
-## 10.3. Method
+Java: forName
 
-### 10.3.1. getMethods()
+Python:
 
-### 10.3.2. getDeclaredMethods()
+```python
 
-### 10.3.3. invoke
+```
 
-# 11. Annotation
+## 10.2. Properties/Fields
+
+### 10.2.1. Get Fields
+
+Java:
+getFields
+getDeclaredFields
+
+### 10.2.2. Access Fields
+
+Java:
+Field.get()/set()
+
+Python:
+
+```python
+class Demo:
+    foo = 123
+
+f = getattr(Demo, 'foo')
+print(f)
+```
+
+## 10.3. Methods
+
+### 10.3.1. Get Methods
+
+Java:
+getMethods()
+getDeclaredMethods()
+
+### 10.3.2. Invoke Methods
+Java:
+invoke()
+
+Python:
+
+```python
+class Demo:
+    def foo(x):
+        return x * x
+
+f = getattr(Demo, 'foo')
+print(f(3))
+```
+
+# 11. Annotations/Decorators
 
 ## 11.1. Built in: over, dep, warn
 
@@ -527,11 +674,11 @@ __del__()
 
 ## 12.1. Reserved/Key words
 
-### 12.1.4. Java
+### 12.1.3. Java
 
-### 12.1.5. JavaScript
+### 12.1.4. JavaScript
 
-### 12.1.6. Python
+### 12.1.5. Python
 
 ## 12.2. Comments and docstring
 
