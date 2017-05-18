@@ -25,17 +25,15 @@ date: "2017-05-16 12:51:53 +0800"
     - [2.6. exception](#26-exception)
 - [3. Function](#3-function)
     - [3.1. Definition](#31-definition)
-    - [3.2. Recursive](#32-recursive)
-    - [3.3. Callback](#33-callback)
-    - [3.4. Lambda](#34-lambda)
+    - [3.2. Overload and Default Arguments](#32-overload-and-default-arguments)
+    - [3.3. Recursive](#33-recursive)
+    - [3.4. Callback](#34-callback)
+    - [3.5. Lambda](#35-lambda)
 - [4. Class and Object](#4-class-and-object)
-    - [4.1. Class](#41-class)
-    - [4.2. this and super](#42-this-and-super)
-    - [4.3. Overload](#43-overload)
-    - [4.4. constructor](#44-constructor)
-    - [4.5. destructor and GC](#45-destructor-and-gc)
-    - [4.6. static](#46-static)
-    - [4.7. final](#47-final)
+    - [4.1. Definition (property and method)](#41-definition-property-and-method)
+    - [4.2. Class/Object Memeber](#42-classobject-memeber)
+    - [4.3. Encapsulation (private/protected/public)](#43-encapsulation-privateprotectedpublic)
+    - [4.4. Constructor and Destructor](#44-constructor-and-destructor)
 - [5. Inheritance and Polymorphism](#5-inheritance-and-polymorphism)
     - [5.1. Inherit](#51-inherit)
     - [5.2. Polymorphism](#52-polymorphism)
@@ -206,6 +204,8 @@ elif, <>, in
 
 Java: case String
 
+JavaScript: 'case' means '==='
+
 Python: not support
 
 <!--## 2.3. goto-->
@@ -261,15 +261,39 @@ Python: pass
 
 ### 3.1.2. Local and Global (Scope)
 
+JavaScript:
+
+```javascript
+var a = 11, b = 11;
+
+function foo() {
+    var a;
+    a = 22;
+    b = 22;
+}
+
+foo();
+console.log(a, b);
+```
+
 ### 3.1.3. Return Value
 
 object copy or reference?
 
-## 3.2. Recursive
+## 3.2. Overload and Default Arguments
 
-## 3.3. Callback
+Lang | Overload | Default Arguments
+-----|----------|------------------
+C++ | Y | Y
+Java | Y | N
+JavaScript | N | Y
+Python | N | Y
 
-## 3.4. Lambda
+## 3.3. Recursive
+
+## 3.4. Callback
+
+## 3.5. Lambda
 
 JavaScript:
 
@@ -290,35 +314,121 @@ print(f(3))
 
 # 4. Class and Object
 
-## 4.1. Class
+## 4.1. Definition (property and method)
 
-### 4.1.1. property and method
+Java: (skipped)
 
-### 4.1.2. Default, Private, public
+JavaScript:
 
-## 4.2. this and super
+```javascript
+function Demo() {
+    console.log('init')
+    this.a = 11;
+    this.foo = function (x) { // or use lambda ('=>')
+        console.log(x + this.a)
+    }
+}
 
-### 4.2.1. this for constructor
+var demo = new Demo()
+demo.foo(22)
+```
 
-## 4.3. Overload
+anonymous class
 
-## 4.4. constructor
+```javascript
+var demo = {
+    a: 11,
+    foo: function (x) { // or use lambda ('=>')
+         console.log(x + this.a)
+    }
+}
 
-## 4.5. destructor and GC
+// var demo = new Demo()
+demo.foo(22)
+```
 
-### 4.5.1. finalize
+Python:
 
-## 4.6. static
+```python
 
-## 4.7. final
+```
+
+## 4.2. Class/Object Memeber
+
+### 4.2.1. this/self
+
+### 4.2.2. *Case Study*
+
+<!--this for constructor-->
+Java:
+
+```java
+public class Demo {
+    static int x = 11;
+    // int x = 22; // error: variable x is already defined
+```
+
+JavaScript:
+
+
+Python:
+
+```python
+x = 11 # static/class property
+
+class Demo:
+    x = 22
+
+    def __init__(self): # object method
+        self.x = 33 # object property
+        print(x)
+
+	# add @staticmethod for python 2.x
+    def foo(): # static/class method
+        print(x)
+        print(Demo.x)
+
+demo = Demo()
+print(demo.x)
+Demo.foo()
+```
+
+comment line 7 and check output again
+
+## 4.3. Encapsulation (private/protected/public)
+
+Java: +default
+
+
+Python: none
+
+__ as private in convention
+
+
+## 4.4. Constructor and Destructor
+
+Python:
+
+```python
+__init__()
+
+__del__()
+
+```
+
+### 4.4.1. GC
+
+### 4.4.2. finalize
 
 # 5. Inheritance and Polymorphism
 
 ## 5.1. Inherit
 
-### 5.1.1. super
+### 5.1.3. super
 
-### 5.1.2. protected, default
+### 5.1.4. protected, default
+
+### 5.1.5. final
 
 ## 5.2. Polymorphism
 
@@ -422,14 +532,6 @@ print(f(3))
 ### 12.1.5. JavaScript
 
 ### 12.1.6. Python
-and                 elif                global              or 
-assert              else                if                  pass 
-break               except              import              print 
-class               exec                in                  raise 
-continue            finally             is                  return 
-def                 for                 lambda              try 
-del                 from                not                 while 
-
 
 ## 12.2. Comments and docstring
 
