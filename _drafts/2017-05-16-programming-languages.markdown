@@ -33,6 +33,7 @@ date: "2017-05-16 12:51:53 +0800"
         - [Delete element](#delete-element)
         - [Search element](#search-element)
     - [Tuple](#tuple)
+        - [Declaration](#declaration)
     - [Directory/Hash/Associative array](#directoryhashassociative-array)
         - [Definition](#definition-1)
         - [CRUD](#crud)
@@ -944,6 +945,8 @@ VB Script:
 
 ## Tuple
 
+### Declaration
+
 Basic:
 
 ```basic
@@ -992,11 +995,7 @@ Java:
 
 ```
 
-JavaScript:
-
-```javascript
-
-```
+JavaScript: not supported
 
 Kotlin:
 
@@ -1073,7 +1072,8 @@ Swift:
 TypeScript:
 
 ```typescript
-
+let user: [string, number];
+user = ['Jack', 18];
 ```
 
 VB Script:
