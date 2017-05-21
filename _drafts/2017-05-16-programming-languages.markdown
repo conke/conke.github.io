@@ -708,7 +708,9 @@ Java:
 JavaScript:
 
 ```javascript
-
+ar.shift()
+ar.pop()
+ar.splice(0, 1)
 ```
 
 Kotlin:
@@ -786,7 +788,9 @@ Swift:
 TypeScript:
 
 ```typescript
-
+ar.shift()
+ar.pop()
+ar.splice(0, 1)
 ```
 
 VB Script:
