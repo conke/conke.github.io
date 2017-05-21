@@ -562,7 +562,7 @@ Java:
 
 ```
 
-JavaScript:
+JavaScript/TypeScript:
 
 ```javascript
 list.push(3)
@@ -644,8 +644,7 @@ Swift:
 TypeScript:
 
 ```typescript
-ar.push(3)
-ar.unshift(0)
+
 ```
 
 VB Script:
@@ -705,7 +704,7 @@ Java:
 
 ```
 
-JavaScript:
+JavaScript/TypeScript:
 
 ```javascript
 ar.shift()
@@ -788,9 +787,7 @@ Swift:
 TypeScript:
 
 ```typescript
-ar.shift()
-ar.pop()
-ar.splice(0, 1)
+
 ```
 
 VB Script:
