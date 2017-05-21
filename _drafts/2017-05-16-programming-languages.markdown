@@ -2439,7 +2439,7 @@ type cb = (number) => void;
 
 Java: (skipped)
 
-JavaScript:
+JavaScript/TypeScript:
 
 ```javascript
 function Demo() {
@@ -2490,8 +2490,11 @@ public class Demo {
 }
 ```
 
-JavaScript:
+TypeScript:
 
+```typescript
+
+```
 
 Python:
 
