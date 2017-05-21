@@ -36,7 +36,7 @@ date: "2017-05-16 12:51:53 +0800"
         - [Declaration](#declaration)
     - [Directory/Hash/Associative array](#directoryhashassociative-array)
         - [Definition](#definition-1)
-        - [CRUD](#crud)
+        - [Add](#add)
     - [Date and Time](#date-and-time)
         - [Format](#format)
         - [Operation](#operation)
@@ -1092,7 +1092,9 @@ Map m = new XMap<Type1, Type2>();
 JavaScript:
 
 ```javascript
-var m = {key1:value1, key2:value2, ...};
+let user = {};
+let user = new Map();
+let m = {key1:value1, key2:value2, ...};
 ```
 
 types of values may be different.
@@ -1261,8 +1263,7 @@ VB Script:
 
 ```
 
-### CRUD
-
+### Add
 
 Basic:
 
@@ -1315,7 +1316,8 @@ Java:
 JavaScript:
 
 ```javascript
-
+user['name'] = 'Conke';
+user.age = 18;
 ```
 
 Kotlin:
