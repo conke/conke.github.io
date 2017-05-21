@@ -15,11 +15,12 @@ date: "2017-05-16 12:51:53 +0800"
         - [1.2.1. Variable Declaration](#121-variable-declaration)
         - [1.2.2. Logical Operators](#122-logical-operators)
     - [1.3. Number](#13-number)
-        - [1.3.1. Variable Declaration](#131-variable-declaration)
-        - [1.3.2. Arithmetic Operators](#132-arithmetic-operators)
-        - [1.3.3. Assignment Operators](#133-assignment-operators)
-        - [1.3.4. Comparison Operators](#134-comparison-operators)
-        - [1.3.5. Bitwise Operators](#135-bitwise-operators)
+        - [1.3.1. Constants](#131-constants)
+        - [1.3.2. Variable Declaration](#132-variable-declaration)
+        - [1.3.3. Arithmetic Operators](#133-arithmetic-operators)
+        - [1.3.4. Assignment Operators](#134-assignment-operators)
+        - [1.3.5. Comparison Operators](#135-comparison-operators)
+        - [1.3.6. Bitwise Operators](#136-bitwise-operators)
     - [1.4. String](#14-string)
         - [1.4.1. Variable Declaration](#141-variable-declaration)
         - [1.4.2. Assignment Operators](#142-assignment-operators)
@@ -224,16 +225,22 @@ let done: boolean = true;
 
 ## 1.3. Number
 
-### 1.3.1. Variable Declaration
+### 1.3.1. Constants
 
-Constants:
+0b11, 011/0o11, 0x11
 
-```javascript
-console.log(2017.0520)
-console.log(2e3 + 17)
-```
+2e3 (JS/TS/Python)
 
-### 1.3.2. Arithmetic Operators
+Math.PI
+
+complex
+
+enum
+
+### 1.3.2. Variable Declaration
+
+
+### 1.3.3. Arithmetic Operators
 
 C/C++/Java/JavaScript/TypeScript:
 ```c
@@ -246,7 +253,7 @@ C/C++/Java/JavaScript/TypeScript:
 --
 ```
 
-### 1.3.3. Assignment Operators
+### 1.3.4. Assignment Operators
 
 C/C++/Java/JavaScript/TypeScript:
 ```c
@@ -258,7 +265,7 @@ C/C++/Java/JavaScript/TypeScript:
 %=
 ```
 
-### 1.3.4. Comparison Operators
+### 1.3.5. Comparison Operators
 
 ```c
 ==
@@ -272,7 +279,7 @@ C/C++/Java/JavaScript/TypeScript:
 ?:
 ```
 
-### 1.3.5. Bitwise Operators
+### 1.3.6. Bitwise Operators
 
 ```c
 &
