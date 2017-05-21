@@ -59,8 +59,8 @@ date: "2017-05-16 12:51:53 +0800"
         - [Return Value](#return-value)
     - [Overload and Default Arguments](#overload-and-default-arguments)
     - [Recursive](#recursive)
-    - [Callback](#callback)
     - [Lambda](#lambda)
+    - [Callback](#callback)
 - [Class and Object](#class-and-object)
     - [Definition (property and method)](#definition-property-and-method)
     - [Class/Object Memeber](#classobject-memeber)
@@ -2376,6 +2376,7 @@ object copy or reference?
 
 Lang | Overload | Default Arguments
 -----|----------|------------------
+C | N | N
 C++ | Y | Y
 Java | Y | N
 JavaScript<br/>TypeScript | N | Y
@@ -2383,13 +2384,15 @@ Python | N | Y
 
 ## Recursive
 
-## Callback
-
 ## Lambda
 
 JavaScript:
 
 ```javascript
+f = function (x) {
+    return x * x;
+}
+
 f = (x) => x * x;
 console.log(f(3));
 
@@ -2402,6 +2405,32 @@ Python:
 ```python
 f = lambda x:  x * x
 print(f(3))
+```
+
+## Callback
+
+JavaScript/TypeScript:
+
+```javascript
+let s = 0;
+arr.forEach((e) => s += e);
+console.log(s);
+```
+
+```typescript
+function my_for_each(arr: Array<number>, visit: (number) => void) {
+    for (let x of arr)
+        visit(x);
+}
+
+let s: number = 0;
+my_for_each([1, 4, 3, 6], (x) => s += x);
+```
+
+Tips:
+
+```javascript
+type cb = (number) => void;
 ```
 
 # Class and Object
