@@ -36,7 +36,10 @@ date: "2017-05-16 12:51:53 +0800"
         - [Declaration](#declaration)
     - [Directory/Hash/Associative array](#directoryhashassociative-array)
         - [Definition](#definition-1)
+        - [Access/Traversal](#accesstraversal-1)
         - [Add](#add)
+        - [Delete](#delete)
+        - [Search](#search)
     - [Date and Time](#date-and-time)
         - [Format](#format)
         - [Operation](#operation)
@@ -305,11 +308,13 @@ JavaScript:
 
 ```javascript
 let s1 = "123";
+let s2 = new String("abc");
 ```
 
 TypeScript:
 ```typescript
 let s1: string = "123";
+// let s2 = new String("abc");
 ```
 
 ### Assignment Operators
@@ -1082,8 +1087,49 @@ VB Script:
 ## Directory/Hash/Associative array
 
 ### Definition
+Basic:
 
-Java
+```basic
+
+```
+
+C/C++:
+
+```c
+
+```
+
+C#:
+
+```C#
+
+```
+
+Erlang:
+
+```erlang
+
+```
+
+Go:
+
+```go
+
+```
+
+Groovy:
+
+```groovy
+
+```
+
+Haskell:
+
+```haskell
+
+```
+
+Java:
 
 ```java
 Map m = new XMap<Type1, Type2>();
@@ -1093,8 +1139,9 @@ JavaScript:
 
 ```javascript
 let user = {};
-let m = {key1:value1, key2:value2, ...};
-// let user = new Map();
+let user = {key1:value1, key2:value2, ...};
+
+let user = new Map();
 ```
 
 types of values may be different.
@@ -1103,7 +1150,44 @@ reference:
 
 m[key] or m.key
 
-Python
+
+Kotlin:
+
+```kotlin
+
+```
+
+Lua:
+
+```lua
+
+```
+
+PHP:
+
+```php
+
+```
+
+Matlab:
+
+```matlab
+
+```
+
+Perl:
+
+```perl
+
+```
+
+PowerShell:
+
+```powershell
+
+```
+
+Python:
 
 ```python
 m = {}
@@ -1124,7 +1208,54 @@ del m['aa']
 print(keys, m)
 ```
 
+R:
 
+```r
+
+```
+
+Ruby:
+
+```ruby
+
+```
+
+Rust:
+
+```rust
+
+```
+
+Scala:
+
+```scala
+
+```
+
+Swift:
+
+```swift
+
+```
+
+TypeScript:
+
+```typescript
+// ?
+interface IUser {
+    [key: string]: any;
+}
+
+let user: IUser = {};
+```
+
+VB Script:
+
+```vbs
+
+```
+
+### Access/Traversal
 Basic:
 
 ```basic
@@ -1176,7 +1307,8 @@ Java:
 JavaScript:
 
 ```javascript
-
+for () // primitive only
+map.forEach()
 ```
 
 Kotlin:
@@ -1218,6 +1350,16 @@ PowerShell:
 Python:
 
 ```python
+m = {}
+```
+
+builtin map() function
+
+Interation
+
+dictionary view:
+
+```python
 
 ```
 
@@ -1254,11 +1396,7 @@ Swift:
 TypeScript:
 
 ```typescript
-interface IUser {
-    [key: string]: any;
-}
 
-let user: IUser = {};
 ```
 
 VB Script:
@@ -1321,7 +1459,9 @@ JavaScript:
 
 ```javascript
 user['name'] = 'Conke';
-user.age = 18;
+user.name = 'Conke';
+
+user.set('name', 'Conke');
 ```
 
 Kotlin:
@@ -1400,7 +1540,7 @@ TypeScript:
 
 ```typescript
 user['name'] = 'Conke';
-user['age'] = 18;
+user.name = 18;
 ```
 
 VB Script:
@@ -1409,6 +1549,295 @@ VB Script:
 
 ```
 
+### Delete
+
+Basic:
+
+```basic
+
+```
+
+C/C++:
+
+```c
+
+```
+
+C#:
+
+```C#
+
+```
+
+Erlang:
+
+```erlang
+
+```
+
+Go:
+
+```go
+
+```
+
+Groovy:
+
+```groovy
+
+```
+
+Haskell:
+
+```haskell
+
+```
+
+Java:
+
+```java
+
+```
+
+JavaScript:
+
+```javascript
+// primitive (?)
+map['key'] = undefined;
+map.key = undefined;
+
+// Object
+map.delete(key);
+map.clear();
+```
+
+Kotlin:
+
+```kotlin
+
+```
+
+Lua:
+
+```lua
+
+```
+
+PHP:
+
+```php
+
+```
+
+Matlab:
+
+```matlab
+
+```
+
+Perl:
+
+```perl
+
+```
+
+PowerShell:
+
+```powershell
+
+```
+
+Python:
+
+```python
+
+```
+
+R:
+
+```r
+
+```
+
+Ruby:
+
+```ruby
+
+```
+
+Rust:
+
+```rust
+
+```
+
+Scala:
+
+```scala
+
+```
+
+Swift:
+
+```swift
+
+```
+
+TypeScript:
+
+```typescript
+
+```
+
+VB Script:
+
+```vbs
+
+```
+
+### Search
+
+Basic:
+
+```basic
+
+```
+
+C/C++:
+
+```c
+
+```
+
+C#:
+
+```C#
+
+```
+
+Erlang:
+
+```erlang
+
+```
+
+Go:
+
+```go
+
+```
+
+Groovy:
+
+```groovy
+
+```
+
+Haskell:
+
+```haskell
+
+```
+
+Java:
+
+```java
+
+```
+
+JavaScript:
+
+```javascript
+// ?
+map.key === undefined;
+
+map.get(key);
+map.has(key);
+```
+
+Kotlin:
+
+```kotlin
+
+```
+
+Lua:
+
+```lua
+
+```
+
+PHP:
+
+```php
+
+```
+
+Matlab:
+
+```matlab
+
+```
+
+Perl:
+
+```perl
+
+```
+
+PowerShell:
+
+```powershell
+
+```
+
+Python:
+
+```python
+
+```
+
+R:
+
+```r
+
+```
+
+Ruby:
+
+```ruby
+
+```
+
+Rust:
+
+```rust
+
+```
+
+Scala:
+
+```scala
+
+```
+
+Swift:
+
+```swift
+
+```
+
+TypeScript:
+
+```typescript
+
+```
+
+VB Script:
+
+```vbs
+
+```
 
 ## Date and Time
 
