@@ -28,10 +28,11 @@ date: "2017-05-16 12:51:53 +0800"
     - [1.5. Pointer and Reference](#15-pointer-and-reference)
     - [1.6. Array and List](#16-array-and-list)
         - [1.6.1. Definition](#161-definition)
-        - [1.6.2. Add element](#162-add-element)
-        - [1.6.3. Delete element](#163-delete-element)
-        - [1.6.4. Search element](#164-search-element)
-        - [1.6.5. Sort](#165-sort)
+        - [1.6.2. Access/Traversal](#162-accesstraversal)
+        - [1.6.3. Add element](#163-add-element)
+        - [1.6.4. Delete element](#164-delete-element)
+        - [1.6.5. Search element](#165-search-element)
+        - [1.6.6. Sort](#166-sort)
     - [1.7. Tuple](#17-tuple)
     - [1.8. Directory/Hash/Associative array](#18-directoryhashassociative-array)
         - [1.8.1. Definition](#181-definition)
@@ -359,13 +360,15 @@ Python:
 ar = [11, 33, 22, 'abc']
 ```
 
-### 1.6.2. Add element
+### 1.6.2. Access/Traversal
 
-### 1.6.3. Delete element
+### 1.6.3. Add element
 
-### 1.6.4. Search element
+### 1.6.4. Delete element
 
-### 1.6.5. Sort
+### 1.6.5. Search element
+
+### 1.6.6. Sort
 
 ## 1.7. Tuple
 
