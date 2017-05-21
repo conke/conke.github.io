@@ -565,7 +565,8 @@ Java:
 JavaScript:
 
 ```javascript
-
+list.push(3)
+list.unshift(0)
 ```
 
 Kotlin:
@@ -848,8 +849,7 @@ Java:
 JavaScript:
 
 ```javascript
-list.push(3)
-list.unshift(0)
+
 ```
 
 Kotlin:
