@@ -6,127 +6,127 @@ date: "2017-05-16 12:51:53 +0800"
 
 <!-- TOC -->
 
-- [1. Data types, operators and expressions](#1-data-types-operators-and-expressions)
-    - [1.1. Overview](#11-overview)
-        - [1.1.1. Type list](#111-type-list)
-        - [1.1.2. Show Type Info](#112-show-type-info)
-        - [1.1.3. Variable Declaration](#113-variable-declaration)
-    - [1.2. Boolean](#12-boolean)
-        - [1.2.1. Variable Declaration](#121-variable-declaration)
-        - [1.2.2. Logical Operators](#122-logical-operators)
-    - [1.3. Number](#13-number)
-        - [1.3.1. Constants](#131-constants)
-        - [1.3.2. Variable Declaration](#132-variable-declaration)
-        - [1.3.3. Arithmetic Operators](#133-arithmetic-operators)
-        - [1.3.4. Assignment Operators](#134-assignment-operators)
-        - [1.3.5. Comparison Operators](#135-comparison-operators)
-        - [1.3.6. Bitwise Operators](#136-bitwise-operators)
-    - [1.4. String](#14-string)
-        - [1.4.1. Variable Declaration](#141-variable-declaration)
-        - [1.4.2. Assignment Operators](#142-assignment-operators)
-        - [1.4.3. Comparison Operators](#143-comparison-operators)
-    - [1.5. Pointer and Reference](#15-pointer-and-reference)
-    - [1.6. Array and List](#16-array-and-list)
-        - [1.6.1. Definition](#161-definition)
-        - [1.6.2. Access/Traversal](#162-accesstraversal)
-        - [1.6.3. Add element](#163-add-element)
-        - [1.6.4. Delete element](#164-delete-element)
-        - [1.6.5. Search element](#165-search-element)
-        - [1.6.6. Sort](#166-sort)
-    - [1.7. Tuple](#17-tuple)
-    - [1.8. Directory/Hash/Associative array](#18-directoryhashassociative-array)
-        - [1.8.1. Definition](#181-definition)
-        - [1.8.2. CRUD](#182-crud)
-    - [1.9. Date and Time](#19-date-and-time)
-        - [1.9.1. Format](#191-format)
-        - [1.9.2. Operation](#192-operation)
-    - [1.10. Preprocessing](#110-preprocessing)
-- [2. Control statements](#2-control-statements)
-    - [2.1. if](#21-if)
-    - [2.2. switch](#22-switch)
-    - [2.3. while](#23-while)
-    - [2.4. for](#24-for)
-    - [2.5. break and continue](#25-break-and-continue)
-    - [2.6. exception](#26-exception)
-- [3. Function](#3-function)
-    - [3.1. Definition](#31-definition)
-        - [3.1.1. Variable arguments](#311-variable-arguments)
-        - [3.1.2. Local and Global (Scope)](#312-local-and-global-scope)
-        - [3.1.3. Return Value](#313-return-value)
-    - [3.2. Overload and Default Arguments](#32-overload-and-default-arguments)
-    - [3.3. Recursive](#33-recursive)
-    - [3.4. Callback](#34-callback)
-    - [3.5. Lambda](#35-lambda)
-- [4. Class and Object](#4-class-and-object)
-    - [4.1. Definition (property and method)](#41-definition-property-and-method)
-    - [4.2. Class/Object Memeber](#42-classobject-memeber)
-        - [4.2.1. this/self](#421-thisself)
-        - [4.2.2. *Case Study*](#422-case-study)
-    - [4.3. Encapsulation (private/protected/public)](#43-encapsulation-privateprotectedpublic)
-    - [4.4. Constructor and Destructor](#44-constructor-and-destructor)
-        - [4.4.1. GC](#441-gc)
-        - [4.4.2. finalize](#442-finalize)
-- [5. Inheritance and Polymorphism](#5-inheritance-and-polymorphism)
-    - [5.1. Inherit](#51-inherit)
-        - [5.1.3. super](#513-super)
-        - [5.1.4. protected, default](#514-protected-default)
-        - [5.1.5. final](#515-final)
-    - [5.2. Polymorphism](#52-polymorphism)
-        - [5.2.1. Override](#521-override)
-        - [5.2.2. virtual](#522-virtual)
-    - [5.3. Abstract Class](#53-abstract-class)
-    - [5.4. Interface](#54-interface)
-        - [5.4.1. Implements](#541-implements)
-        - [5.4.2. Extends](#542-extends)
-        - [5.4.3. Multiple implements/extends](#543-multiple-implementsextends)
-- [6. Generic/Template Class](#6-generictemplate-class)
-    - [6.1. <?>](#61-)
-- [7. Collection](#7-collection)
-    - [7.1. Set](#71-set)
-    - [7.2. List](#72-list)
-    - [7.3. Map](#73-map)
-    - [7.4. Vector](#74-vector)
-- [8. String and Regular Expression](#8-string-and-regular-expression)
-    - [8.1. Basic operations](#81-basic-operations)
-        - [8.1.1. Format](#811-format)
-        - [8.1.2. Compare](#812-compare)
-        - [8.1.3. Sub string](#813-sub-string)
-        - [8.1.4. Search and substitution](#814-search-and-substitution)
-        - [8.1.5. Split and join](#815-split-and-join)
-        - [8.1.6. String-Number Conversion](#816-string-number-conversion)
-    - [8.2. regular expressions](#82-regular-expressions)
-- [9. Modular Programming](#9-modular-programming)
-    - [9.1. Header](#91-header)
-    - [9.2. Static](#92-static)
-    - [9.3. Statically-linked libs](#93-statically-linked-libs)
-    - [9.4. Dynamically-linked libs](#94-dynamically-linked-libs)
-    - [9.5. Package](#95-package)
-        - [9.5.1. Create (jar)](#951-create-jar)
-- [10. Reflection](#10-reflection)
-    - [10.1. Class](#101-class)
-        - [10.1.2. Get Name](#1012-get-name)
-        - [10.1.3. from Name](#1013-from-name)
-    - [10.2. Properties/Fields](#102-propertiesfields)
-        - [10.2.1. Get Fields](#1021-get-fields)
-        - [10.2.2. Access Fields](#1022-access-fields)
-    - [10.3. Methods](#103-methods)
-        - [10.3.1. Get Methods](#1031-get-methods)
-        - [10.3.2. Invoke Methods](#1032-invoke-methods)
-- [11. Annotations/Decorators](#11-annotationsdecorators)
-    - [11.1. Built-in Annotations](#111-built-in-annotations)
-- [12. Others](#12-others)
-    - [12.1. Reserved/Key words](#121-reservedkey-words)
-        - [12.1.3. Java](#1213-java)
-        - [12.1.4. JavaScript](#1214-javascript)
-        - [12.1.5. Python](#1215-python)
-    - [12.2. Comments and docstring](#122-comments-and-docstring)
-    - [12.3. Versions and Features](#123-versions-and-features)
+- [Data types, operators and expressions](#data-types-operators-and-expressions)
+    - [Overview](#overview)
+        - [Type list](#type-list)
+        - [Show Type Info](#show-type-info)
+        - [Variable Declaration](#variable-declaration)
+    - [Boolean](#boolean)
+        - [Variable Declaration](#variable-declaration-1)
+        - [Logical Operators](#logical-operators)
+    - [Number](#number)
+        - [Constants](#constants)
+        - [Variable Declaration](#variable-declaration-2)
+        - [Arithmetic Operators](#arithmetic-operators)
+        - [Assignment Operators](#assignment-operators)
+        - [Comparison Operators](#comparison-operators)
+        - [Bitwise Operators](#bitwise-operators)
+    - [String](#string)
+        - [Variable Declaration](#variable-declaration-3)
+        - [Assignment Operators](#assignment-operators-1)
+        - [Comparison Operators](#comparison-operators-1)
+    - [Pointer and Reference](#pointer-and-reference)
+    - [Array and List](#array-and-list)
+        - [Definition](#definition)
+        - [Access/Traversal](#accesstraversal)
+        - [Add element](#add-element)
+        - [Delete element](#delete-element)
+        - [Search element](#search-element)
+        - [Sort](#sort)
+    - [Tuple](#tuple)
+    - [Directory/Hash/Associative array](#directoryhashassociative-array)
+        - [Definition](#definition-1)
+        - [CRUD](#crud)
+    - [Date and Time](#date-and-time)
+        - [Format](#format)
+        - [Operation](#operation)
+    - [Preprocessing](#preprocessing)
+- [Control statements](#control-statements)
+    - [if](#if)
+    - [switch](#switch)
+    - [while](#while)
+    - [for](#for)
+    - [break and continue](#break-and-continue)
+    - [exception](#exception)
+- [Function](#function)
+    - [Definition](#definition-2)
+        - [Variable arguments](#variable-arguments)
+        - [Local and Global (Scope)](#local-and-global-scope)
+        - [Return Value](#return-value)
+    - [Overload and Default Arguments](#overload-and-default-arguments)
+    - [Recursive](#recursive)
+    - [Callback](#callback)
+    - [Lambda](#lambda)
+- [Class and Object](#class-and-object)
+    - [Definition (property and method)](#definition-property-and-method)
+    - [Class/Object Memeber](#classobject-memeber)
+        - [this/self](#thisself)
+        - [*Case Study*](#case-study)
+    - [Encapsulation (private/protected/public)](#encapsulation-privateprotectedpublic)
+    - [Constructor and Destructor](#constructor-and-destructor)
+        - [GC](#gc)
+        - [finalize](#finalize)
+- [Inheritance and Polymorphism](#inheritance-and-polymorphism)
+    - [Inherit](#inherit)
+        - [super](#super)
+        - [protected, default](#protected-default)
+        - [final](#final)
+    - [Polymorphism](#polymorphism)
+        - [Override](#override)
+        - [virtual](#virtual)
+    - [Abstract Class](#abstract-class)
+    - [Interface](#interface)
+        - [Implements](#implements)
+        - [Extends](#extends)
+        - [Multiple implements/extends](#multiple-implementsextends)
+- [Generic/Template Class](#generictemplate-class)
+    - [<?>](#)
+- [Collection](#collection)
+    - [Set](#set)
+    - [List](#list)
+    - [Map](#map)
+    - [Vector](#vector)
+- [String and Regular Expression](#string-and-regular-expression)
+    - [Basic operations](#basic-operations)
+        - [Format](#format-1)
+        - [Compare](#compare)
+        - [Sub string](#sub-string)
+        - [Search and substitution](#search-and-substitution)
+        - [Split and join](#split-and-join)
+        - [String-Number Conversion](#string-number-conversion)
+    - [regular expressions](#regular-expressions)
+- [Modular Programming](#modular-programming)
+    - [Header](#header)
+    - [Static](#static)
+    - [Statically-linked libs](#statically-linked-libs)
+    - [Dynamically-linked libs](#dynamically-linked-libs)
+    - [Package](#package)
+        - [Create (jar)](#create-jar)
+- [Reflection](#reflection)
+    - [Class](#class)
+        - [Get Name](#get-name)
+        - [from Name](#from-name)
+    - [Properties/Fields](#propertiesfields)
+        - [Get Fields](#get-fields)
+        - [Access Fields](#access-fields)
+    - [Methods](#methods)
+        - [Get Methods](#get-methods)
+        - [Invoke Methods](#invoke-methods)
+- [Annotations/Decorators](#annotationsdecorators)
+    - [Built-in Annotations](#built-in-annotations)
+- [Others](#others)
+    - [Reserved/Key words](#reservedkey-words)
+        - [Java](#java)
+        - [JavaScript](#javascript)
+        - [Python](#python)
+    - [Comments and docstring](#comments-and-docstring)
+    - [Versions and Features](#versions-and-features)
 
 <!-- /TOC -->
 
-# 1. Data types, operators and expressions
+# Data types, operators and expressions
 
-## 1.1. Overview
+## Overview
 
 typeof
 
@@ -134,7 +134,7 @@ instanceof
 
 typedef
 
-### 1.1.1. Type list
+### Type list
 
 
 JavaScript:
@@ -180,7 +180,7 @@ JavaScript
 Python
 -->
 
-### 1.1.2. Show Type Info
+### Show Type Info
 
 Java: getClass()
 
@@ -190,7 +190,7 @@ Python: type()
 
 TypeScript: ?
 
-### 1.1.3. Variable Declaration
+### Variable Declaration
 
 JavaScript:
 
@@ -210,9 +210,9 @@ let b: number = 2;
 const c: number = 3;
 ```
 
-## 1.2. Boolean
+## Boolean
 
-### 1.2.1. Variable Declaration
+### Variable Declaration
 constants: true/false
 
 TypeScript:
@@ -220,16 +220,16 @@ TypeScript:
 let done: boolean = true;
 ```
 
-### 1.2.2. Logical Operators
+### Logical Operators
 
 ```javascript
 ==, ===
 &&, ||, !
 ```
 
-## 1.3. Number
+## Number
 
-### 1.3.1. Constants
+### Constants
 
 0b11, 011/0o11, 0x11
 
@@ -241,10 +241,10 @@ complex
 
 enum
 
-### 1.3.2. Variable Declaration
+### Variable Declaration
 
 
-### 1.3.3. Arithmetic Operators
+### Arithmetic Operators
 
 C/C++/Java/JavaScript/TypeScript:
 ```c
@@ -257,7 +257,7 @@ C/C++/Java/JavaScript/TypeScript:
 --
 ```
 
-### 1.3.4. Assignment Operators
+### Assignment Operators
 
 C/C++/Java/JavaScript/TypeScript:
 ```c
@@ -269,7 +269,7 @@ C/C++/Java/JavaScript/TypeScript:
 %=
 ```
 
-### 1.3.5. Comparison Operators
+### Comparison Operators
 
 ```c
 ==
@@ -283,7 +283,7 @@ C/C++/Java/JavaScript/TypeScript:
 ?:
 ```
 
-### 1.3.6. Bitwise Operators
+### Bitwise Operators
 
 ```c
 &
@@ -295,11 +295,11 @@ C/C++/Java/JavaScript/TypeScript:
 >>>
 ```
 
-## 1.4. String
+## String
 
 Unicode
 
-### 1.4.1. Variable Declaration
+### Variable Declaration
 
 JavaScript:
 
@@ -312,7 +312,7 @@ TypeScript:
 let s1: string = "123";
 ```
 
-### 1.4.2. Assignment Operators
+### Assignment Operators
 
 Java/JavaScript/TypeScript:
 ```c
@@ -320,7 +320,7 @@ Java/JavaScript/TypeScript:
 +=
 ```
 
-### 1.4.3. Comparison Operators
+### Comparison Operators
 
 
 ```c
@@ -334,13 +334,13 @@ Java/JavaScript/TypeScript:
 <=
 ```
 
-## 1.5. Pointer and Reference
+## Pointer and Reference
 
-## 1.6. Array and List
+## Array and List
 
 Use random
 
-### 1.6.1. Definition
+### Definition
 
 JavaScript:
 
@@ -360,21 +360,21 @@ Python:
 ar = [11, 33, 22, 'abc']
 ```
 
-### 1.6.2. Access/Traversal
+### Access/Traversal
 
-### 1.6.3. Add element
+### Add element
 
-### 1.6.4. Delete element
+### Delete element
 
-### 1.6.5. Search element
+### Search element
 
-### 1.6.6. Sort
+### Sort
 
-## 1.7. Tuple
+## Tuple
 
-## 1.8. Directory/Hash/Associative array
+## Directory/Hash/Associative array
 
-### 1.8.1. Definition
+### Definition
 
 Java
 
@@ -415,19 +415,19 @@ del m['aa']
 print(keys, m)
 ```
 
-### 1.8.2. CRUD
+### CRUD
 
-## 1.9. Date and Time
+## Date and Time
 
-### 1.9.1. Format
+### Format
 
-### 1.9.2. Operation
+### Operation
 
-## 1.10. Preprocessing
+## Preprocessing
 
-# 2. Control statements
+# Control statements
 
-## 2.1. if
+## if
 
 JavaScript:
 
@@ -439,7 +439,7 @@ Python:
 
 elif, <>, in
 
-## 2.2. switch
+## switch
 
 Java: case String
 
@@ -449,15 +449,15 @@ Python: not support
 
 <!--## 2.3. goto-->
 
-## 2.3. while
+## while
 
 practice: Insert, Merge
 
-## 2.4. for
+## for
 
-## 2.5. break and continue
+## break and continue
 
-## 2.6. exception
+## exception
 
 C++/Java/JavaScript in common:
 
@@ -490,9 +490,9 @@ else:
 	...
 ```
 
-# 3. Function
+# Function
 
-## 3.1. Definition
+## Definition
 
 Python:
 
@@ -510,9 +510,9 @@ def foo(x: int) -> int:
 
 pass
 
-### 3.1.1. Variable arguments
+### Variable arguments
 
-### 3.1.2. Local and Global (Scope)
+### Local and Global (Scope)
 
 JavaScript:
 
@@ -529,11 +529,11 @@ foo();
 console.log(a, b);
 ```
 
-### 3.1.3. Return Value
+### Return Value
 
 object copy or reference?
 
-## 3.2. Overload and Default Arguments
+## Overload and Default Arguments
 
 Lang | Overload | Default Arguments
 -----|----------|------------------
@@ -542,11 +542,11 @@ Java | Y | N
 JavaScript | N | Y
 Python | N | Y
 
-## 3.3. Recursive
+## Recursive
 
-## 3.4. Callback
+## Callback
 
-## 3.5. Lambda
+## Lambda
 
 JavaScript:
 
@@ -565,9 +565,9 @@ f = lambda x:  x * x
 print(f(3))
 ```
 
-# 4. Class and Object
+# Class and Object
 
-## 4.1. Definition (property and method)
+## Definition (property and method)
 
 Java: (skipped)
 
@@ -606,11 +606,11 @@ Python:
 
 ```
 
-## 4.2. Class/Object Memeber
+## Class/Object Memeber
 
-### 4.2.1. this/self
+### this/self
 
-### 4.2.2. *Case Study*
+### *Case Study*
 
 <!--this for constructor-->
 Java:
@@ -662,7 +662,7 @@ def foo(cls):
 
 comment line 7 and check output again
 
-## 4.3. Encapsulation (private/protected/public)
+## Encapsulation (private/protected/public)
 
 Java: +default
 
@@ -672,7 +672,7 @@ Python: none
 __ as private in convention
 
 
-## 4.4. Constructor and Destructor
+## Constructor and Destructor
 
 Python:
 
@@ -683,15 +683,15 @@ __del__()
 
 ```
 
-### 4.4.1. GC
+### GC
 
-### 4.4.2. finalize
+### finalize
 
-# 5. Inheritance and Polymorphism
+# Inheritance and Polymorphism
 
-## 5.1. Inherit
+## Inherit
 
-### 5.1.3. super
+### super
 
 Pyton:
 
@@ -713,17 +713,17 @@ c = C()
 c.foo()
 ```
 
-### 5.1.4. protected, default
+### protected, default
 
-### 5.1.5. final
+### final
 
-## 5.2. Polymorphism
+## Polymorphism
 
-### 5.2.1. Override
+### Override
 
-### 5.2.2. virtual
+### virtual
 
-## 5.3. Abstract Class
+## Abstract Class
 
 Java:
 
@@ -757,33 +757,33 @@ class Demo(metaclass=ABCMeta):
         pass
 ```
 
-## 5.4. Interface
+## Interface
 
-### 5.4.1. Implements
+### Implements
 
-### 5.4.2. Extends
+### Extends
 
-### 5.4.3. Multiple implements/extends
+### Multiple implements/extends
 
-# 6. Generic/Template Class
+# Generic/Template Class
 
-## 6.1. <?>
+## <?>
 
-# 7. Collection
+# Collection
 
-## 7.1. Set
+## Set
 
-## 7.2. List
+## List
 
-## 7.3. Map
+## Map
 
-## 7.4. Vector
+## Vector
 
-# 8. String and Regular Expression
+# String and Regular Expression
 
-## 8.1. Basic operations
+## Basic operations
 
-### 8.1.1. Format
+### Format
 
 Python 3.x:
 
@@ -795,39 +795,39 @@ content = f'{key} = {value}'
 print(content)
 ```
 
-### 8.1.2. Compare
+### Compare
 
-### 8.1.3. Sub string
+### Sub string
 
-### 8.1.4. Search and substitution
+### Search and substitution
 
-### 8.1.5. Split and join
+### Split and join
 
-### 8.1.6. String-Number Conversion
+### String-Number Conversion
 
 <!--StringBuffer, StringBuilder-->
 
-## 8.2. regular expressions
+## regular expressions
 
-# 9. Modular Programming
+# Modular Programming
 
-## 9.1. Header
+## Header
 
-## 9.2. Static
+## Static
 
-## 9.3. Statically-linked libs
+## Statically-linked libs
 
-## 9.4. Dynamically-linked libs
+## Dynamically-linked libs
 
-## 9.5. Package
+## Package
 
-### 9.5.1. Create (jar)
+### Create (jar)
 
-# 10. Reflection
+# Reflection
 
-## 10.1. Class
+## Class
 
-### 10.1.2. Get Name
+### Get Name
 
 Java: getName
 
@@ -841,7 +841,7 @@ demo = Demo()
 print(type(demo).__name__)
 ```
 
-### 10.1.3. from Name
+### from Name
 
 Java: forName
 
@@ -851,15 +851,15 @@ Python:
 
 ```
 
-## 10.2. Properties/Fields
+## Properties/Fields
 
-### 10.2.1. Get Fields
+### Get Fields
 
 Java:
 getFields
 getDeclaredFields
 
-### 10.2.2. Access Fields
+### Access Fields
 
 Java:
 Field.get()/set()
@@ -874,7 +874,7 @@ f = getattr(Demo, 'foo')
 print(f)
 ```
 
-## 10.3. Methods
+## Methods
 
 ```java
 public class Demo {
@@ -889,7 +889,7 @@ public class Demo {
 }
 ```
 
-### 10.3.1. Get Methods
+### Get Methods
 
 Java:
 getMethods()
@@ -910,7 +910,7 @@ public class Demo {
 }
 ```
 
-### 10.3.2. Invoke Methods
+### Invoke Methods
 Java:
 invoke()
 
@@ -925,9 +925,9 @@ f = getattr(Demo, 'foo')
 print(f(3))
 ```
 
-# 11. Annotations/Decorators
+# Annotations/Decorators
 
-## 11.1. Built-in Annotations
+## Built-in Annotations
 
 Java:
 
@@ -935,17 +935,17 @@ Java:
 @Override
 @SuppressWarnings
 
-# 12. Others
+# Others
 
-## 12.1. Reserved/Key words
+## Reserved/Key words
 
-### 12.1.3. Java
+### Java
 
-### 12.1.4. JavaScript
+### JavaScript
 
-### 12.1.5. Python
+### Python
 
-## 12.2. Comments and docstring
+## Comments and docstring
 
-## 12.3. Versions and Features
+## Versions and Features
 
