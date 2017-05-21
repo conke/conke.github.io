@@ -41,8 +41,9 @@ date: "2017-05-16 12:51:53 +0800"
         - [Delete](#delete)
         - [Search](#search)
     - [Date and Time](#date-and-time)
-        - [Format](#format)
-        - [Operation](#operation)
+        - [Get Date/Time](#get-datetime)
+        - [Format Date/Time](#format-datetime)
+        - [Operations (+/-)](#operations--)
     - [Preprocessing](#preprocessing)
 - [Control statements](#control-statements)
     - [if](#if)
@@ -91,7 +92,7 @@ date: "2017-05-16 12:51:53 +0800"
     - [Vector](#vector)
 - [String and Regular Expression](#string-and-regular-expression)
     - [Basic operations](#basic-operations)
-        - [Format](#format-1)
+        - [Format](#format)
         - [Compare](#compare)
         - [Sub string](#sub-string)
         - [Search and substitution](#search-and-substitution)
@@ -1841,7 +1842,7 @@ VB Script:
 
 ## Date and Time
 
-### Format
+### Get Date/Time
 
 Basic:
 
@@ -1981,7 +1982,7 @@ VB Script:
 
 ```
 
-### Operation
+### Format Date/Time
 
 Basic:
 
@@ -2121,6 +2122,145 @@ VB Script:
 
 ```
 
+### Operations (+/-)
+
+Basic:
+
+```basic
+
+```
+
+C/C++:
+
+```c
+
+```
+
+C#:
+
+```C#
+
+```
+
+Erlang:
+
+```erlang
+
+```
+
+Go:
+
+```go
+
+```
+
+Groovy:
+
+```groovy
+
+```
+
+Haskell:
+
+```haskell
+
+```
+
+Java:
+
+```java
+
+```
+
+JavaScript:
+
+```javascript
+
+```
+
+Kotlin:
+
+```kotlin
+
+```
+
+Lua:
+
+```lua
+
+```
+
+PHP:
+
+```php
+
+```
+
+Matlab:
+
+```matlab
+
+```
+
+Perl:
+
+```perl
+
+```
+
+PowerShell:
+
+```powershell
+
+```
+
+Python:
+
+```python
+
+```
+
+R:
+
+```r
+
+```
+
+Ruby:
+
+```ruby
+
+```
+
+Rust:
+
+```rust
+
+```
+
+Scala:
+
+```scala
+
+```
+
+Swift:
+
+```swift
+
+```
+
+TypeScript:
+
+```typescript
+
+```
+
+VB Script:
+
+```vbs
+
+```
 
 ## Preprocessing
 
@@ -2238,7 +2378,7 @@ Lang | Overload | Default Arguments
 -----|----------|------------------
 C++ | Y | Y
 Java | Y | N
-JavaScript | N | Y
+JavaScript<br/>TypeScript | N | Y
 Python | N | Y
 
 ## Recursive
