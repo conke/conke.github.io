@@ -1093,8 +1093,8 @@ JavaScript:
 
 ```javascript
 let user = {};
-let user = new Map();
 let m = {key1:value1, key2:value2, ...};
+// let user = new Map();
 ```
 
 types of values may be different.
@@ -1551,7 +1551,6 @@ VB Script:
 ```vbs
 
 ```
-
 
 ### Operation
 
