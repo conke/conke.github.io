@@ -32,7 +32,6 @@ date: "2017-05-16 12:51:53 +0800"
         - [Add element](#add-element)
         - [Delete element](#delete-element)
         - [Search element](#search-element)
-        - [Sort](#sort)
     - [Tuple](#tuple)
     - [Directory/Hash/Associative array](#directoryhashassociative-array)
         - [Definition](#definition-1)
@@ -367,8 +366,6 @@ ar = [11, 33, 22, 'abc']
 ### Delete element
 
 ### Search element
-
-### Sort
 
 ## Tuple
 
