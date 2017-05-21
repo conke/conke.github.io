@@ -851,10 +851,10 @@ Java:
 
 ```
 
-JavaScript:
+JavaScript/TypeScript:
 
 ```javascript
-
+array.indexOf(element[, fromIndex = 0])
 ```
 
 Kotlin:
