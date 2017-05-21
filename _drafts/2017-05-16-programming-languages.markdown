@@ -1254,7 +1254,11 @@ Swift:
 TypeScript:
 
 ```typescript
+interface IUser {
+    [key: string]: any;
+}
 
+let user: IUser = {};
 ```
 
 VB Script:
@@ -1395,7 +1399,8 @@ Swift:
 TypeScript:
 
 ```typescript
-
+user['name'] = 'Conke';
+user['age'] = 18;
 ```
 
 VB Script:
