@@ -926,7 +926,8 @@ Swift:
 TypeScript:
 
 ```typescript
-
+ar.push(3)
+ar.unshift(0)
 ```
 
 VB Script:
