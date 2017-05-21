@@ -412,7 +412,18 @@ Java:
 JavaScript:
 
 ```javascript
-
+//method 1:
+for(let i = 0; i < list.length; i++) {
+    console.log(list[i]);
+}
+//method 2:
+for(let i in list) {
+    console.log(list[i]);
+}
+//method 3:
+for(let x of list) {
+    console.log(x);
+}
 ```
 
 Kotlin:
@@ -490,7 +501,18 @@ Swift:
 TypeScript:
 
 ```typescript
-
+//method 1:
+for(let i = 0; i < list.length; i++) {
+    console.log(list[i]);
+}
+//method 2:
+for(let i in list) {
+    console.log(list[i]);
+}
+//method 3:
+for(let x of list) {
+    console.log(x);
+}
 ```
 
 VB Script:
