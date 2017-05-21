@@ -12,15 +12,18 @@ date: "2017-05-16 12:51:53 +0800"
         - [1.1.2. Show Type Info](#112-show-type-info)
         - [1.1.3. Variable Declaration](#113-variable-declaration)
     - [1.2. Boolean](#12-boolean)
-        - [1.2.2. Variable Declaration](#122-variable-declaration)
-        - [1.2.3. Logical Operators](#123-logical-operators)
+        - [1.2.1. Variable Declaration](#121-variable-declaration)
+        - [1.2.2. Logical Operators](#122-logical-operators)
     - [1.3. Number](#13-number)
-        - [1.3.2. Variable Declaration](#132-variable-declaration)
-        - [1.3.3. Arithmetic Operators](#133-arithmetic-operators)
-        - [1.3.4. Assignment Operators](#134-assignment-operators)
-        - [1.3.5. Comparison Operators](#135-comparison-operators)
-        - [1.3.6. Bitwise Operators](#136-bitwise-operators)
+        - [1.3.1. Variable Declaration](#131-variable-declaration)
+        - [1.3.2. Arithmetic Operators](#132-arithmetic-operators)
+        - [1.3.3. Assignment Operators](#133-assignment-operators)
+        - [1.3.4. Comparison Operators](#134-comparison-operators)
+        - [1.3.5. Bitwise Operators](#135-bitwise-operators)
     - [1.4. String](#14-string)
+        - [1.4.1. Variable Declaration](#141-variable-declaration)
+        - [1.4.2. Assignment Operators](#142-assignment-operators)
+        - [1.4.3. Comparison Operators](#143-comparison-operators)
     - [1.5. Pointer and Reference](#15-pointer-and-reference)
     - [1.6. Array and List](#16-array-and-list)
         - [1.6.1. Definition](#161-definition)
@@ -85,8 +88,7 @@ date: "2017-05-16 12:51:53 +0800"
         - [8.1.3. Sub string](#813-sub-string)
         - [8.1.4. Search and substitution](#814-search-and-substitution)
         - [8.1.5. Split and join](#815-split-and-join)
-        - [8.1.6. StringBuffer](#816-stringbuffer)
-        - [8.1.7. StringBuilder](#817-stringbuilder)
+        - [8.1.6. String-Number Conversion](#816-string-number-conversion)
     - [8.2. regular expressions](#82-regular-expressions)
 - [9. Modular Programming](#9-modular-programming)
     - [9.1. Header](#91-header)
@@ -205,7 +207,7 @@ const c: number = 3;
 
 ## 1.2. Boolean
 
-### 1.2.2. Variable Declaration
+### 1.2.1. Variable Declaration
 constants: true/false
 
 TypeScript:
@@ -213,7 +215,7 @@ TypeScript:
 let done: boolean = true;
 ```
 
-### 1.2.3. Logical Operators
+### 1.2.2. Logical Operators
 
 ```javascript
 ==, ===
@@ -222,7 +224,7 @@ let done: boolean = true;
 
 ## 1.3. Number
 
-### 1.3.2. Variable Declaration
+### 1.3.1. Variable Declaration
 
 Constants:
 
@@ -231,7 +233,7 @@ console.log(2017.0520)
 console.log(2e3 + 17)
 ```
 
-### 1.3.3. Arithmetic Operators
+### 1.3.2. Arithmetic Operators
 
 C/C++/Java/JavaScript/TypeScript:
 ```c
@@ -244,7 +246,7 @@ C/C++/Java/JavaScript/TypeScript:
 --
 ```
 
-### 1.3.4. Assignment Operators
+### 1.3.3. Assignment Operators
 
 C/C++/Java/JavaScript/TypeScript:
 ```c
@@ -256,13 +258,13 @@ C/C++/Java/JavaScript/TypeScript:
 %=
 ```
 
-### 1.3.5. Comparison Operators
+### 1.3.4. Comparison Operators
 
 ```c
 ==
-===
+=== // JavaScript only
 !=
-!==
+!== // JavaScript only
 >
 <
 >=
@@ -270,7 +272,7 @@ C/C++/Java/JavaScript/TypeScript:
 ?:
 ```
 
-### 1.3.6. Bitwise Operators
+### 1.3.5. Bitwise Operators
 
 ```c
 &
@@ -285,6 +287,40 @@ C/C++/Java/JavaScript/TypeScript:
 ## 1.4. String
 
 Unicode
+
+### 1.4.1. Variable Declaration
+
+JavaScript:
+
+```javascript
+let s1 = "123";
+```
+
+TypeScript:
+```typescript
+let s1: string = "123";
+```
+
+### 1.4.2. Assignment Operators
+
+Java/JavaScript/TypeScript:
+```c
+=
++=
+```
+
+### 1.4.3. Comparison Operators
+
+```c
+==
+=== // JavaScript only
+!=
+!== // JavaScript only
+>
+<
+>=
+<=
+```
 
 ## 1.5. Pointer and Reference
 
@@ -728,9 +764,9 @@ print(content)
 
 ### 8.1.5. Split and join
 
-### 8.1.6. StringBuffer
+### 8.1.6. String-Number Conversion
 
-### 8.1.7. StringBuilder
+<!--StringBuffer, StringBuilder-->
 
 ## 8.2. regular expressions
 
