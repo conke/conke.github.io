@@ -34,7 +34,7 @@ date: "2017-05-16 12:51:53 +0800"
         - [Search element](#search-element)
     - [Tuple](#tuple)
         - [Declaration](#declaration)
-    - [Directory/Hash/Associative array](#directoryhashassociative-array)
+    - [Directory/Map/Hash/Associative array](#directorymaphashassociative-array)
         - [Definition](#definition-1)
         - [Access/Traversal](#accesstraversal-1)
         - [Add](#add)
@@ -1085,7 +1085,7 @@ VB Script:
 
 ```
 
-## Directory/Hash/Associative array
+## Directory/Map/Hash/Associative array
 
 ### Definition
 Basic:
