@@ -2632,7 +2632,7 @@ class Demo(metaclass=ABCMeta):
 
 ### Implements
 TypeScript：
-```
+```typescript
 interface Animal {
     name: string;
     age: number;
@@ -2650,7 +2650,7 @@ class Cat implements Animal {
 ```
 ### Extends
 TypeScript：
-```
+```typescript
 interface Shape {
     color: string;
 }
