@@ -2631,9 +2631,38 @@ class Demo(metaclass=ABCMeta):
 ## Interface
 
 ### Implements
+TypeScript：
+```
+interface Animal {
+    name: string;
+    age: number;
+    setNameandAge(name: string, age: number);
+}
 
+class Cat implements Animal {
+    name: string;
+    age: number;
+    setNameandAge(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+}
+```
 ### Extends
+TypeScript：
+```
+interface Shape {
+    color: string;
+}
 
+interface Square extends Shape {
+    sideLength: number;
+}
+
+let square = <Square>{};
+square.color = "blue";
+square.sideLength = 10;
+```
 ### Multiple implements/extends
 
 # Generic/Template Class
