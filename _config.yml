@@ -14,13 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: >
-  <h1>胡思<sub>不乱想</sub></h1>
-  <h1>胡言<sub>不乱语</sub></h1>
-  <h1>胡作<sub>不非为</sub></h1>
+  <h1>胡思&nbsp;<sub>不乱想</sub></h1>
+  <h1>胡言&nbsp;<sub>不乱语</sub></h1>
+  <h1>胡作&nbsp;<sub>不非为</sub></h1>
+  <br/>
 email: conke.hu@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  <h1>欢迎来到Conke胡的个人博客！</h1>
-  <br>
+  <h3>欢迎来到Conke胡的个人博客！</h3>
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
