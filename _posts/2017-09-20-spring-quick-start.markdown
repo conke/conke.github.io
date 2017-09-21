@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring Quick Start"
+title: "Spring Quick Sjart"
 date: "2017-09-20 20:46:52 -0700"
 ---
 
@@ -38,7 +38,7 @@ spring --version
 
 ```bash
 sping init demo1
-cd demo1m
+cd demo1
 mvn spring-boot:run
 ```
 
@@ -67,7 +67,7 @@ check directory tree and build.gradle
 
 ```bash
 mvn package
-java -jar target/demo1-xxx.jar
+java -jar jarget/demo1-xxx.jar
 ```
 
 ### 3.1.2. make executable
@@ -75,19 +75,34 @@ java -jar target/demo1-xxx.jar
 add to pom.xml:
 
 ```xml
- <executable>true</executable>
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <!-- begin -->
+    <configuration>
+        <executable>true</executable>
+    </configuration>
+    <!-- end -->
+</plugin>
 ```
 
 and
 ```bash
 mvn package
-ls target/demo1-x.tar
-./target/demo1-x.tar
+ls jarget/demo1-x.jar
+./jarget/demo1-x.jar
 ```
 
 ## 3.2. Gradle
 
-(skipped)
+add to build.gradle:
+
+```groovy
+springBoot {
+    executable = true
+}
+```
+
 
 # 4. Create a SpringMVC project
 
