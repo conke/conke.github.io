@@ -4,18 +4,33 @@ title: "Spring Quick Start"
 date: "2017-09-20 20:46:52 -0700"
 ---
 
-# Install Spring Boot CLI
+<!-- TOC -->
+
+- [1. Install Spring Boot CLI](#1-install-spring-boot-cli)
+- [2. Create Spring Projects](#2-create-spring-projects)
+    - [2.1. Create a normal spring project](#21-create-a-normal-spring-project)
+        - [2.1.1. Spring with maven](#211-spring-with-maven)
+        - [2.1.2. Spring with gradle](#212-spring-with-gradle)
+    - [2.2. Other ways to run spring-boot project](#22-other-ways-to-run-spring-boot-project)
+    - [2.3. Create a SpringMVC project](#23-create-a-springmvc-project)
+        - [2.3.1. Create/Init a project](#231-createinit-a-project)
+        - [2.3.2. Run](#232-run)
+        - [2.3.3. Add code](#233-add-code)
+
+<!-- /TOC -->
+
+# 1. Install Spring Boot CLI
 
 ```bash
 sdk install springboot
 spring --version
 ```
 
-# Create Spring Projects
+# 2. Create Spring Projects
 
-## Create a normal spring project
+## 2.1. Create a normal spring project
 
-### Spring with maven
+### 2.1.1. Spring with maven
 
 ```bash
 sping init demo1
@@ -30,7 +45,7 @@ tree
 vi pom.xml
 ```
 
-### Spring with gradle
+### 2.1.2. Spring with gradle
 
 ```bash
 sping init --build=gradle demo1
@@ -40,7 +55,7 @@ gradle bootRun
 
 check directory tree and build.gradle
 
-## Other ways to run spring-boot project
+## 2.2. Other ways to run spring-boot project
 
 way 1:
 
@@ -62,15 +77,15 @@ and
 ./target/demo1-x.tar
 ```
 
-## Create a SpringMVC project
+## 2.3. Create a SpringMVC project
 
-### Create/Init a project
+### 2.3.1. Create/Init a project
 ```bash
 spring init -d=web demo2
 tree
 ```
 
-### Run
+### 2.3.2. Run
 
 ```bash
 cd demo2
@@ -83,4 +98,4 @@ open web browser
 firefox localhost:8080
 ```
 
-### Add code
+### 2.3.3. Add code
