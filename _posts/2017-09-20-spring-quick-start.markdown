@@ -11,11 +11,15 @@ date: "2017-09-20 20:46:52 -0700"
     - [2.1. Create a normal spring project](#21-create-a-normal-spring-project)
         - [2.1.1. Spring with maven](#211-spring-with-maven)
         - [2.1.2. Spring with gradle](#212-spring-with-gradle)
-    - [2.2. Other ways to run spring-boot project](#22-other-ways-to-run-spring-boot-project)
-    - [2.3. Create a SpringMVC project](#23-create-a-springmvc-project)
-        - [2.3.1. Create/Init a project](#231-createinit-a-project)
-        - [2.3.2. Run](#232-run)
-        - [2.3.3. Add code](#233-add-code)
+- [3. Package and make executable](#3-package-and-make-executable)
+    - [3.1. Maven](#31-maven)
+        - [3.1.1. package](#311-package)
+        - [3.1.2. make executable](#312-make-executable)
+    - [3.2. Gradle](#32-gradle)
+- [4. Create a SpringMVC project](#4-create-a-springmvc-project)
+    - [4.1. Create/Init a project](#41-createinit-a-project)
+    - [4.2. Run](#42-run)
+    - [4.3. Add code](#43-add-code)
 
 <!-- /TOC -->
 
@@ -55,16 +59,18 @@ gradle bootRun
 
 check directory tree and build.gradle
 
-## 2.2. Other ways to run spring-boot project
+# 3. Package and make executable
 
-way 1:
+## 3.1. Maven
+
+### 3.1.1. package
 
 ```bash
 mvn package
 java -jar target/demo1-xxx.jar
 ```
 
-way 2:
+### 3.1.2. make executable
 
 add to pom.xml:
 
@@ -74,18 +80,24 @@ add to pom.xml:
 
 and
 ```bash
+mvn package
+ls target/demo1-x.tar
 ./target/demo1-x.tar
 ```
 
-## 2.3. Create a SpringMVC project
+## 3.2. Gradle
 
-### 2.3.1. Create/Init a project
+(skipped)
+
+# 4. Create a SpringMVC project
+
+## 4.1. Create/Init a project
 ```bash
 spring init -d=web demo2
 tree
 ```
 
-### 2.3.2. Run
+## 4.2. Run
 
 ```bash
 cd demo2
@@ -98,4 +110,4 @@ open web browser
 firefox localhost:8080
 ```
 
-### 2.3.3. Add code
+## 4.3. Add code
