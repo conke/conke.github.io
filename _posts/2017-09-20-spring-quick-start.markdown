@@ -134,13 +134,36 @@ tree
 
 ```bash
 cd demo2
-mvn spring-boot:run
+
+mvn spring-boot:run # Maven
+gradle bootRun # Gradle
 ```
 
-open web browser
+
+test:
 
 ```bash
+curl localhost:8080
+# or:
 firefox localhost:8080
 ```
 
 ## 4.3. Add code
+
+create a new java file:
+
+```java
+package com.example.demo2;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Demo {
+    @RequestMapping("/")
+    public String foo() {
+        return "Demo2: MVC";
+    }
+}
+```
+
