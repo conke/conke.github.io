@@ -16,6 +16,8 @@ date: "2017-09-20 20:46:52 -0700"
         - [3.1.1. package](#311-package)
         - [3.1.2. make executable](#312-make-executable)
     - [3.2. Gradle](#32-gradle)
+        - [3.2.1. package](#321-package)
+        - [3.2.2. make executable](#322-make-executable)
 - [4. Create a SpringMVC project](#4-create-a-springmvc-project)
     - [4.1. Create/Init a project](#41-createinit-a-project)
     - [4.2. Run](#42-run)
@@ -67,7 +69,7 @@ check directory tree and build.gradle
 
 ```bash
 mvn package
-java -jar jarget/demo1-xxx.jar
+java -jar target/demo1-xxx.jar
 ```
 
 ### 3.1.2. make executable
@@ -89,11 +91,21 @@ add to pom.xml:
 and
 ```bash
 mvn package
-ls jarget/demo1-x.jar
-./jarget/demo1-x.jar
+ls -l target
+./target/demo1-x.jar
 ```
 
 ## 3.2. Gradle
+
+### 3.2.1. package
+
+```bash
+gradle build
+ls -l build
+java -jar build/demo1-xxx.jar
+```
+
+### 3.2.2. make executable
 
 add to build.gradle:
 
@@ -103,6 +115,12 @@ springBoot {
 }
 ```
 
+and
+```bash
+gradle build
+ls -l build
+build/demo1-x.jar
+```
 
 # 4. Create a SpringMVC project
 
