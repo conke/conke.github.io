@@ -34,7 +34,7 @@ date: "2017-05-16 12:51:53 +0800"
         - [Search element](#search-element)
     - [Tuple](#tuple)
         - [Declaration](#declaration)
-    - [Directory/Map/Hash/Associative array](#directorymaphashassociative-array)
+    - [Directory/Hash/Associative array](#directoryhashassociative-array)
         - [Definition](#definition-1)
         - [Access/Traversal](#accesstraversal-1)
         - [Add](#add)
@@ -70,6 +70,7 @@ date: "2017-05-16 12:51:53 +0800"
     - [Constructor and Destructor](#constructor-and-destructor)
         - [GC](#gc)
         - [finalize](#finalize)
+    - [Abstract Class and Interface](#abstract-class-and-interface)
 - [Inheritance and Polymorphism](#inheritance-and-polymorphism)
     - [Inherit](#inherit)
         - [super](#super)
@@ -84,7 +85,8 @@ date: "2017-05-16 12:51:53 +0800"
         - [Extends](#extends)
         - [Multiple implements/extends](#multiple-implementsextends)
 - [Generic/Template Class](#generictemplate-class)
-    - [<?>](#)
+    - [Generic Function](#generic-function)
+    - [Generic Class](#generic-class)
 - [Collection](#collection)
     - [Set](#set)
     - [List](#list)
@@ -1085,7 +1087,7 @@ VB Script:
 
 ```
 
-## Directory/Map/Hash/Associative array
+## Directory/Hash/Associative array
 
 ### Definition
 Basic:
@@ -2558,6 +2560,8 @@ __del__()
 
 ### finalize
 
+## Abstract Class and Interface
+
 # Inheritance and Polymorphism
 
 ## Inherit
@@ -2631,43 +2635,16 @@ class Demo(metaclass=ABCMeta):
 ## Interface
 
 ### Implements
-TypeScript：
-```typescript
-interface Animal {
-    name: string;
-    age: number;
-    setNameandAge(name: string, age: number);
-}
 
-class Cat implements Animal {
-    name: string;
-    age: number;
-    setNameandAge(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-    }
-}
-```
 ### Extends
-TypeScript：
-```typescript
-interface Shape {
-    color: string;
-}
 
-interface Square extends Shape {
-    sideLength: number;
-}
-
-let square = <Square>{};
-square.color = "blue";
-square.sideLength = 10;
-```
 ### Multiple implements/extends
 
 # Generic/Template Class
 
-## <?>
+## Generic Function
+
+## Generic Class
 
 # Collection
 
