@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring Quick Sjart"
+title: "Spring Quick Start"
 date: "2017-09-20 20:46:52 -0700"
 ---
 
