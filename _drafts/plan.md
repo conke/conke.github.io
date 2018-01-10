@@ -2,8 +2,8 @@
 
 ### 快速反应组
 
-### 架构组加强
+### 架构组（加强）
 
-### workflow
+### Workflow
 
-### Tech training
+### Tech Talk （技术分享）
