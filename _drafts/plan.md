@@ -79,7 +79,7 @@ workflow:
 1. Auto: code analysis/scan, UT (all? android/iOS?)
 1. code review +1 and discuss
 1. 提交merge/pull request, 注意rebase & squash commit
-1. run UT
+1. run UT (in devel env): consider sql build
 1. code review +2
 1. merge to master
 2. deploy to devel/team env
@@ -88,6 +88,7 @@ workflow:
 2. merge to testing branch
 1. deploy to testing env
 2. notify QA
+1. acceptance testing
 1. integration testing (if failed: re-open or open a new issue?)
 2. merge to staging branch
 1. deploy to staging env (DB sync issue)
