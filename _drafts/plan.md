@@ -45,22 +45,51 @@ confluence不止存放PRD，除PRD还有存放所有必要的文档，包括但�
 
 ## 2.2. Product-service Workflow
 
+scrum/xp/tdd
+
+DDD
+
+business
+
+env:
+local
+devel (for each team), iteration source of other modules? CI/CD issue, openstack/kubernetes?
+testing
+staging: db issue?
+production
+
 1. PRD discuss
-2. 分解issue，确定sprint/kanban
-3. 测试提交issue
-4. 创建issue branch
-5. coding
-6. 提交merge/pull request
-7. code check
-8. code review
-9. UT，自动化测试
-10. 测试人员测试
-11. merge, close issue, update spring/kanban
-12. merge to test env, integration testing
+1. 分解issue (back): backlog
+1. 测试(?)提交issue
+1. 确定sprint/kanban/burn down -> test thread ...
+1. issue assign
+1. 创建issue branch
+1. coding, include UT
+1. push (as frequently as possible)
+1. Auto: code analysis/scan, UT (all? android/iOS?)
+1. code review
+1. 提交merge/pull request, 注意rebase & squash commit -> CI/CD to other devel env?
+1. happy path test? CD
+1. auto: merge to master
+1. auto: close issue
+1. auto: update sprint/kanban -> notify PM ...
+1. update confluence?
+2. merge to testing branch
+1. deploy to testing env
+1. integration testing
+2. merge to staging branch
+1. deploy to staging env
+2. merge to staging branch
+1. PM review -> production
+1. 
+
+ATTD?
+
+nightly build/test
+
+architecture:
 
 # 3. 架构组（加强）
-
-
 
 开发环境，包括：
 1. markdown
