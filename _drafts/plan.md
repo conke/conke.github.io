@@ -45,6 +45,14 @@ confluence不止存放PRD，除PRD还有存放所有必要的文档，包括但�
 
 ## 2.2. Product-service Workflow
 
+roles:
+1. Customers: PM, admin, ...
+1. QA
+2. SE
+3. Ops
+
+whole team
+
 scrum/xp/tdd
 
 DDD
@@ -72,16 +80,19 @@ production
 1. happy path test? CD
 1. auto: merge to master
 1. auto: close issue
-1. auto: update sprint/kanban -> notify PM ...
-1. update confluence?
+1. auto: update sprint/kanban
+2. notify ? ...
 2. merge to testing branch
 1. deploy to testing env
+2. notify QA
 1. integration testing
 2. merge to staging branch
 1. deploy to staging env
+2. notify PM
+1. update confluence?
 2. merge to staging branch
 1. PM review -> production
-1. 
+1. monitor and notification
 
 ATTD?
 
