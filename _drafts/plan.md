@@ -77,11 +77,10 @@ workflow:
 1. coding, include UT
 1. push (as frequently as possible)
 1. Auto: code analysis/scan, UT (all? android/iOS?)
-1. code review and discuss: optional
+1. code review +1 and discuss
 1. 提交merge/pull request, 注意rebase & squash commit
-1. code review
-1. auto: acceptance test?, if failed: .. if skipped: ..
-1. if OK: auto merge to master
+1. code review +2
+1. merge to master
 2. deploy to devel/team env
 2. auto: close issue?
 1. auto: update sprint/kanban? DONE, notify SE/QA?
