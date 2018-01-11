@@ -53,7 +53,7 @@ roles:
 
 whole team
 
-scrum/xp/tdd
+scrum/xp/tdd/ATTD
 
 DDD
 
@@ -66,9 +66,10 @@ testing
 staging: db issue?
 production
 
-1. PRD discuss
-1. 分解issue (back): backlog
-1. 测试(?)提交issue
+1. PRD discuss: PM + QA + SE
+2. interation plan/milestone (粒度控制) => staging/production
+1. 分解issue: PRD -> backlog: QA + SE?
+1. QA submit issue
 1. 确定sprint/kanban/burn down -> test thread ...
 1. issue assign
 1. 创建issue branch
@@ -76,27 +77,26 @@ production
 1. push (as frequently as possible)
 1. Auto: code analysis/scan, UT (all? android/iOS?)
 1. code review
-1. 提交merge/pull request, 注意rebase & squash commit -> CI/CD to other devel env?
-1. happy path test? CD
+1. 提交merge/pull request, 注意rebase & squash commit
+1. acceptance test
 1. auto: merge to master
 1. auto: close issue
+2. deploy to other devel/team env
 1. auto: update sprint/kanban
-2. notify ? ...
+2. notify TL?
 2. merge to testing branch
 1. deploy to testing env
 2. notify QA
-1. integration testing
+1. integration testing (if failed: re-open or open a new issue?)
 2. merge to staging branch
-1. deploy to staging env
-2. notify PM
+1. deploy to staging env (DB sync issue)
 1. update confluence?
+2. notify customers (PM, ...)
 2. merge to staging branch
 1. PM review -> production
-1. monitor and notification
+1. monitor. notify
 
-ATTD?
-
-nightly build/test
+nightly test and report
 
 architecture:
 
