@@ -79,6 +79,7 @@ workflow:
 1. Auto: code analysis/scan, UT (all? android/iOS?)
 1. code review +1 and discuss
 1. 提交merge/pull request, 注意rebase & squash commit
+1. run UT
 1. code review +2
 1. merge to master
 2. deploy to devel/team env
