@@ -68,17 +68,18 @@ env:
 
 workflow:
 1. PRD discuss: PM + QA + SE
-2. interation plan/milestone (粒度控制) => backlog => staging/production
+2. interation plan/milestone (粒度控制) => backlog => staging/production, init PRD status
 1. PRD -> backlog (分解issue): QA + SE
 1. QA submit issue + coding for acceptance test
 1. 确定sprint/kanban/burn down -> test thread ...?, TODO, notify SE/QA
-1. issue assign
+1. issue assign, issue assigned
 1. 创建issue branch: first response: in progress, notify SE/QA
 1. coding, include UT
 1. push (as frequently as possible)
 1. Auto: code analysis/scan, UT (all? android/iOS?)
-1. code review: +1/+2?
+1. code review and discuss: optional
 1. 提交merge/pull request, 注意rebase & squash commit
+1. code review
 1. auto: acceptance test?, if failed: .. if skipped: ..
 1. if OK: auto merge to master
 2. deploy to devel/team env
@@ -91,7 +92,7 @@ workflow:
 2. merge to staging branch
 1. deploy to staging env (DB sync issue)
 2. notify customers (PM, ...)
-3. PM review (acceptance), update PRD
+3. PM review (acceptance), update PRD status
 2. merge to production branch
 1. CD to production env (PM review?)
 2. Ops
