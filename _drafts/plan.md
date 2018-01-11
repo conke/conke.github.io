@@ -90,9 +90,8 @@ workflow:
 1. integration testing (if failed: re-open or open a new issue?)
 2. merge to staging branch
 1. deploy to staging env (DB sync issue)
-1. update PRD (confluence)?
 2. notify customers (PM, ...)
-3. PM review (acceptance)
+3. PM review (acceptance), update PRD
 2. merge to production branch
 1. CD to production env (PM review?)
 2. Ops
