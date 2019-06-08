@@ -130,19 +130,17 @@ pw group mod group_name -m user_name
 - Unix-like通用方式
 
 ```bash
-chsh -s /usr/loca/bin/bash $USER
+chsh -s /usr/bin/zsh $USER
 ```
-
-- macOS/FreeBSD特有方式
-
-```bash
-chpass -s /usr/loca/bin/bash $USER
-```
-
 - Linux特有方式
 
 ```bash
-usermod -s /usr/bin/powershell $USER
+usermod -s /usr/bin/zsh $USER
+```
+- macOS/FreeBSD特有方式
+
+```bash
+chpass -s /usr/bin/zsh $USER
 ```
 
 ## 1.3. CLI: Linux vs BSD
