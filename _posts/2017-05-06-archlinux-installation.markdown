@@ -87,8 +87,7 @@ date: "2017-05-06 11:43:32 +0800"
 ### 2.2. 启动系统并做必要的检测
 检查网络连接
 ```bash
-ip addr # 建议记住该IP
-ping debug.live
+ping aliyun.com
 ```
 
 确认分区类型，即GPT还是DOS。如果/sys/firmware/efi目录非空，则采用GPT，否则用DOS。
@@ -118,12 +117,14 @@ passwd
 Double check:
 ```bash
 ssh localhost
+ip addr # 请记住该IP，后面将有数次操作均需要用到它。
+ssh root@IP
 exit
 ```
 
-从另一台装有SSH客户段的机器（PC/虚拟机/平板均可）上用如下命令登录本机。其中ip为上面上面开始时查看到的IP地址，如果已忘记可用"ip addr"命令重新查看。
+从另一台装有SSH客户段的机器（PC/虚拟机/平板均可）上用如下命令登录本机。其中IP为上面查看到的IP地址。
 ```bash
-ssh root@ip
+ssh root@IP
 ```
 <!-- 本博文（即[第一阶段](http://conke.github.io/system/archlinux/introduction) -->
 接下来所有操作均在远程机器上完成。
@@ -320,7 +321,7 @@ reboot
 检查网络连接
 ```bash
 ip addr
-ping debug.live
+ping aliyun.com
 ```
 
 检查SSH服务
@@ -347,22 +348,20 @@ cat /var/log/syslog.log
 上面工作同时隐含了对systemd的检查。
 
 ### 3.2. 创建普通用户
-添加用户，其中myname是你自定义的用户名
-```bash
-u=myname
-useradd -G wheel -c 'Full Name' -m $u
-passwd $u
-```
-如：
+添加用户，示例如下：
+
 ```bash
 u=conke
-useradd -G wheel -c 'Conke Hu' -m $u
+g=maxwit
+
+groupadd $g
+useradd -g $g -G wheel -c 'Conke Hu' -m $u
 passwd $u
 ```
+
 Double check:
 ```bash
-ssh $u@localhost
-exit
+ssh $u@IP ls # IP地址可用"ip addr"命令查看
 ```
 
 安装sudo
