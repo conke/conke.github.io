@@ -115,10 +115,9 @@ passwd
 
 Double check:
 ```bash
-ssh localhost
+ssh localhost pwd
 ip addr # 请记住该IP，后面将有数次操作均需要用到它。
-ssh root@IP
-exit
+ssh root@IP pwd
 ```
 
 从另一台装有SSH客户段的机器（PC/虚拟机/平板均可）上用如下命令登录本机。其中IP为上面查看到的IP地址。
@@ -276,8 +275,7 @@ passwd
 
 Double check:
 ```bash
-ssh localhost
-exit
+ssh localhost pwd
 ```
 
 ### 2.12. 更新initrd
@@ -360,7 +358,7 @@ passwd $u
 
 Double check:
 ```bash
-ssh $u@IP ls # IP地址可用"ip addr"命令查看
+ssh $u@IP pwd # IP地址可用"ip addr"命令查看
 ```
 
 安装sudo
@@ -381,9 +379,9 @@ exit
 ```
 
 ### 3.3. SSH登录（推荐，非必须）
-从另一台装有SSH客户段的机器（PC/虚拟机/平板均可）上用如下命令登录本机。其中，myname为你的用户名；其中ip为上面开始时查看到的IP地址，如果已忘记可用"ip addr"命令重新查看。
+从另一台装有SSH客户段的机器（PC/虚拟机/平板均可）上用如下命令登录本机。其中，myname为你的用户名；其中IP为上面开始时查看到的IP地址，如果已忘记可用"ip addr"命令重新查看。
 ```bash
-ssh myname@ip
+ssh myname@IP
 sudo su -
 ```
 
