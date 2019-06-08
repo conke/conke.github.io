@@ -6,94 +6,112 @@ date: "2017-05-06 10:41:45 +0800"
 
 《料理鼠王》里有句经典台词："Not any system expert can become a R&D expert, but a R&D expert can come from system experts."
 
-
 <!-- TOC -->
 
 - [1. User and Group](#1-user-and-group)
-    - [1.1. change group](#1-1-change-group)
-    - [1.2. Default shell (login shell)](#1-2-default-shell-login-shell)
-    - [1.3. CLI: Linux vs BSD](#1-3-cli-linux-vs-bsd)
+    - [1.1. change group](#11-change-group)
+    - [1.2. Default shell (login shell)](#12-default-shell-login-shell)
+    - [1.3. CLI: Linux vs BSD](#13-cli-linux-vs-bsd)
 - [2. Block device and file system](#2-block-device-and-file-system)
-    - [2.1. block device info](#2-1-block-device-info)
-        - [2.1.1. mount](#2-1-1-mount)
-- [3. 网络连接](#3)
-    - [3.1. 基本工具](#3-1)
-    - [3.2. VPN](#3-2-vpn)
-    - [3.3. host name](#3-3-host-name)
-- [4. Remote Access](#4-remote-access)
-    - [4.1. Overview](#4-1-overview)
-    - [4.2. SSH](#4-2-ssh)
-        - [4.2.2. Windows](#4-2-2-windows)
-        - [4.2.3. Linux/FreeBSD](#4-2-3-linux-freebsd)
-        - [4.2.4. macOS](#4-2-4-macos)
-        - [4.2.5. Client](#4-2-5-client)
-    - [4.3. VNC](#4-3-vnc)
-        - [4.3.1. Windows](#4-3-1-windows)
-        - [4.3.2. Linux/FreeBSD](#4-3-2-linux-freebsd)
-        - [4.3.3. macOS](#4-3-3-macos)
-        - [4.3.4. Client](#4-3-4-client)
-    - [4.4. RDP](#4-4-rdp)
-        - [4.4.1. Server (Windows only)](#4-4-1-server-windows-only)
-        - [4.4.2. Client](#4-4-2-client)
-    - [4.5. X11](#4-5-x11)
-        - [4.5.1. Server (Unix-like only)](#4-5-1-server-unix-like-only)
-            - [4.5.1.1. Client](#4-5-1-1-client)
-- [5. Zabbix](#5-zabbix)
-- [6. Backup and Restore](#6-backup-and-restore)
-- [7. SeLinux](#7-selinux)
-- [8. D-Bus](#8-d-bus)
-- [9. Init](#9-init)
-    - [9.1. systemd and OpenRC](#9-1-systemd-and-openrc)
-    - [9.2. systemd sucks?](#9-2-systemd-sucks)
-    - [9.3. References](#9-3-references)
-- [10. Package management](#10-package-management)
-- [11. Hardware](#11-hardware)
-    - [11.1. CPU](#11-1-cpu)
-        - [11.1.2. flags](#11-1-2-flags)
-    - [11.2. GPU](#11-2-gpu)
-    - [11.3. PCI Bus](#11-3-pci-bus)
-        - [11.3.1. list](#11-3-1-list)
-        - [11.3.2. driver attached](#11-3-2-driver-attached)
-    - [11.4. USB Bus](#11-4-usb-bus)
-        - [11.4.1. list](#11-4-1-list)
-    - [11.5. Bluetooth and WiFi](#11-5-bluetooth-and-wifi)
-    - [11.6. Storage](#11-6-storage)
-    - [11.7. Benchmark](#11-7-benchmark)
-- [12. Kernel and modules](#12-kernel-and-modules)
-    - [12.1. Kernel](#12-1-kernel)
-    - [12.2. Kernel modules](#12-2-kernel-modules)
-        - [12.2.1. list modules](#12-2-1-list-modules)
-- [13. System service](#13-system-service)
-    - [13.1. List and Status](#13-1-list-and-status)
-        - [13.1.2. Linux initrc](#13-1-2-linux-initrc)
-        - [13.1.3. Linux systemd](#13-1-3-linux-systemd)
-        - [13.1.4. Windows](#13-1-4-windows)
-        - [13.1.5. macOS](#13-1-5-macos)
-        - [13.1.6. FreeBSD](#13-1-6-freebsd)
-    - [13.2. Enable/Disable](#13-2-enable-disable)
-        - [13.2.1. Linux initrc](#13-2-1-linux-initrc)
-        - [13.2.2. Linux systemd](#13-2-2-linux-systemd)
-        - [13.2.3. Windows](#13-2-3-windows)
-        - [13.2.4. macOS](#13-2-4-macos)
-        - [13.2.5. FreeBSD](#13-2-5-freebsd)
-    - [13.3. Start/Stop](#13-3-start-stop)
-        - [13.3.1. Linux initrc](#13-3-1-linux-initrc)
-        - [13.3.2. Linux systemd](#13-3-2-linux-systemd)
-        - [13.3.3. Windows](#13-3-3-windows)
-        - [13.3.4. macOS](#13-3-4-macos)
-        - [13.3.5. FreeBSD](#13-3-5-freebsd)
-    - [13.4. Create/Delete](#13-4-create-delete)
-        - [13.4.1. Linux initrc](#13-4-1-linux-initrc)
-        - [13.4.2. Linux systemd](#13-4-2-linux-systemd)
-        - [13.4.3. Windows](#13-4-3-windows)
-        - [13.4.4. macOS](#13-4-4-macos)
-        - [13.4.5. FreeBSD](#13-4-5-freebsd)
-    - [13.5. Edit/Modify](#13-5-edit-modify)
-        - [13.5.1. Linux initrc](#13-5-1-linux-initrc)
-        - [13.5.2. Linux systemd](#13-5-2-linux-systemd)
-        - [13.5.3. Windows](#13-5-3-windows)
-        - [13.5.4. macOS](#13-5-4-macos)
-        - [13.5.5. FreeBSD](#13-5-5-freebsd)
+    - [2.1. block device info](#21-block-device-info)
+        - [2.1.1. mount](#211-mount)
+- [3. Network](#3-network)
+    - [3.1. Utilities](#31-utilities)
+    - [3.2. VPN](#32-vpn)
+    - [3.3. host name](#33-host-name)
+    - [3.4. Remote Access](#34-remote-access)
+    - [3.5. SSH](#35-ssh)
+        - [3.5.1. Windows](#351-windows)
+        - [3.5.2. Linux/FreeBSD](#352-linuxfreebsd)
+        - [3.5.3. macOS](#353-macos)
+        - [3.5.4. Client](#354-client)
+    - [3.6. VNC](#36-vnc)
+        - [3.6.1. Windows](#361-windows)
+        - [3.6.2. Linux/FreeBSD](#362-linuxfreebsd)
+        - [3.6.3. macOS](#363-macos)
+        - [3.6.4. Client](#364-client)
+    - [3.7. RDP](#37-rdp)
+        - [3.7.1. Server (Windows only)](#371-server-windows-only)
+        - [3.7.2. Client](#372-client)
+    - [3.8. X11](#38-x11)
+        - [3.8.1. Server (Unix-like only)](#381-server-unix-like-only)
+            - [3.8.1.1. Client](#3811-client)
+- [4. Zabbix](#4-zabbix)
+- [5. Backup and Restore](#5-backup-and-restore)
+- [6. SeLinux](#6-selinux)
+- [7. D-Bus](#7-d-bus)
+- [8. Init](#8-init)
+    - [8.1. systemd and OpenRC](#81-systemd-and-openrc)
+    - [8.2. systemd sucks?](#82-systemd-sucks)
+    - [8.3. References](#83-references)
+- [9. Package management](#9-package-management)
+    - [9.1. Search](#91-search)
+        - [9.1.1. dpkg/apt](#911-dpkgapt)
+        - [9.1.2. rpm/yum/dnf](#912-rpmyumdnf)
+        - [9.1.3. emerge](#913-emerge)
+        - [9.1.4. pacman](#914-pacman)
+        - [9.1.5. yaourt](#915-yaourt)
+        - [9.1.6. brew](#916-brew)
+        - [9.1.7. choco](#917-choco)
+        - [9.1.8. pkg](#918-pkg)
+    - [9.2. Install/remove](#92-installremove)
+    - [9.3. List content](#93-list-content)
+        - [9.3.1. dpkg/apt-get/apt](#931-dpkgapt-getapt)
+        - [9.3.2. rpm/yum/dnf](#932-rpmyumdnf)
+        - [9.3.3. emerge](#933-emerge)
+        - [9.3.4. pacman](#934-pacman)
+        - [9.3.5. yaourt](#935-yaourt)
+        - [9.3.6. brew](#936-brew)
+        - [9.3.7. choco](#937-choco)
+        - [9.3.8. pkg](#938-pkg)
+    - [9.4. Build from source](#94-build-from-source)
+- [10. Hardware](#10-hardware)
+    - [10.1. CPU](#101-cpu)
+        - [10.1.1. flags](#1011-flags)
+    - [10.2. GPU](#102-gpu)
+    - [10.3. PCI Bus](#103-pci-bus)
+        - [10.3.1. list](#1031-list)
+        - [10.3.2. driver attached](#1032-driver-attached)
+    - [10.4. USB Bus](#104-usb-bus)
+        - [10.4.1. list](#1041-list)
+    - [10.5. Bluetooth and WiFi](#105-bluetooth-and-wifi)
+    - [10.6. Storage](#106-storage)
+    - [10.7. Benchmark](#107-benchmark)
+- [11. Kernel and modules](#11-kernel-and-modules)
+    - [11.1. Kernel](#111-kernel)
+    - [11.2. Kernel modules](#112-kernel-modules)
+        - [11.2.1. list modules](#1121-list-modules)
+- [12. System service](#12-system-service)
+    - [12.1. List and Status](#121-list-and-status)
+        - [12.1.1. Linux initrc](#1211-linux-initrc)
+        - [12.1.2. Linux systemd](#1212-linux-systemd)
+        - [12.1.3. Windows](#1213-windows)
+        - [12.1.4. macOS](#1214-macos)
+        - [12.1.5. FreeBSD](#1215-freebsd)
+    - [12.2. Enable/Disable](#122-enabledisable)
+        - [12.2.1. Linux initrc](#1221-linux-initrc)
+        - [12.2.2. Linux systemd](#1222-linux-systemd)
+        - [12.2.3. Windows](#1223-windows)
+        - [12.2.4. macOS](#1224-macos)
+        - [12.2.5. FreeBSD](#1225-freebsd)
+    - [12.3. Start/Stop](#123-startstop)
+        - [12.3.1. Linux initrc](#1231-linux-initrc)
+        - [12.3.2. Linux systemd](#1232-linux-systemd)
+        - [12.3.3. Windows](#1233-windows)
+        - [12.3.4. macOS](#1234-macos)
+        - [12.3.5. FreeBSD](#1235-freebsd)
+    - [12.4. Create/Delete](#124-createdelete)
+        - [12.4.1. Linux initrc](#1241-linux-initrc)
+        - [12.4.2. Linux systemd](#1242-linux-systemd)
+        - [12.4.3. Windows](#1243-windows)
+        - [12.4.4. macOS](#1244-macos)
+        - [12.4.5. FreeBSD](#1245-freebsd)
+    - [12.5. Edit/Modify](#125-editmodify)
+        - [12.5.1. Linux initrc](#1251-linux-initrc)
+        - [12.5.2. Linux systemd](#1252-linux-systemd)
+        - [12.5.3. Windows](#1253-windows)
+        - [12.5.4. macOS](#1254-macos)
+        - [12.5.5. FreeBSD](#1255-freebsd)
 
 <!-- /TOC -->
 
@@ -162,9 +180,9 @@ _macOS_
 diskutil
 ```
 
-# 3. 网络连接
+# 3. Network
 
-## 3.1. 基本工具
+## 3.1. Utilities
 - https://en.wikipedia.org/wiki/Iproute2
 
 
@@ -192,9 +210,8 @@ scutil –-set HostName localhost
 ```
 
 
-# 4. Remote Access
+## 3.4. Remote Access
 
-## 4.1. Overview
 
 Protocol | Port | Host | Comments
 ---------|------|------|---------
@@ -203,29 +220,29 @@ RDP | 3389 | Windows |
 VNC | 5900 | All |
 X11 | 6000 | Unix | ?
 
-## 4.2. SSH
+## 3.5. SSH
 
-### 4.2.2. Windows
+### 3.5.1. Windows
 
-### 4.2.3. Linux/FreeBSD
+### 3.5.2. Linux/FreeBSD
 
-### 4.2.4. macOS
+### 3.5.3. macOS
 
-### 4.2.5. Client
+### 3.5.4. Client
 
-## 4.3. VNC
+## 3.6. VNC
 
-### 4.3.1. Windows
+### 3.6.1. Windows
 
-### 4.3.2. Linux/FreeBSD
+### 3.6.2. Linux/FreeBSD
 
-### 4.3.3. macOS
+### 3.6.3. macOS
 
-### 4.3.4. Client
+### 3.6.4. Client
 
-## 4.4. RDP
+## 3.7. RDP
 
-### 4.4.1. Server (Windows only)
+### 3.7.1. Server (Windows only)
 
 system > Advanced system settings
 
@@ -235,44 +252,44 @@ To change the default port:
 
 ![](/res/system/net/rdp-port.png)
 
-### 4.4.2. Client
+### 3.7.2. Client
 
 windows: remote desktop connection
 
 linux: vinagre
 
-## 4.5. X11
+## 3.8. X11
 
-### 4.5.1. Server (Unix-like only)
+### 3.8.1. Server (Unix-like only)
 
-#### 4.5.1.1. Client
-
-
-
-# 5. Zabbix
+#### 3.8.1.1. Client
 
 
-# 6. Backup and Restore
 
-# 7. SeLinux
+# 4. Zabbix
+
+
+# 5. Backup and Restore
+
+# 6. SeLinux
 for archlinux and gentoo
 
-# 8. D-Bus
+# 7. D-Bus
 
-# 9. Init
+# 8. Init
 
-## 9.1. systemd and OpenRC
+## 8.1. systemd and OpenRC
 
 Failed to get D-Bus connection
 
-## 9.2. systemd sucks?
+## 8.2. systemd sucks?
 
 
-## 9.3. References
+## 8.3. References
 - https://dbus.freedesktop.org/doc/dbus-tutorial.html
 
 
-# 10. Package management
+# 9. Package management
 
 
 operation | dpkg/apt-get/apt | rpm/yum/dnf | emerge | pacman/yaourt | brew | choco | pkg
@@ -282,90 +299,90 @@ install/remove
 list content
 build from source
 
-## Search
+## 9.1. Search
 
-### dpkg/apt-get/apt
+### 9.1.1. dpkg/apt
 
-### rpm/yum/dnf
+### 9.1.2. rpm/yum/dnf
 
 ```bash
 yumdb search from_repo ius python
 ```
 
-### emerge
+### 9.1.3. emerge
 
-### pacman
+### 9.1.4. pacman
 
-### yaourt
+### 9.1.5. yaourt
 
-### brew
+### 9.1.6. brew
 
-### choco
+### 9.1.7. choco
 
-### pkg
+### 9.1.8. pkg
 
-## Install/remove
+## 9.2. Install/remove
 
-## List content
+## 9.3. List content
 
-### dpkg/apt-get/apt
+### 9.3.1. dpkg/apt-get/apt
 
-### rpm/yum/dnf
+### 9.3.2. rpm/yum/dnf
 
 ```bash
 rpm -ql postgresql-server
 ```
 
-### emerge
+### 9.3.3. emerge
 
-### pacman
+### 9.3.4. pacman
 
-### yaourt
+### 9.3.5. yaourt
 
-### brew
+### 9.3.6. brew
 
-### choco
+### 9.3.7. choco
 
-### pkg
+### 9.3.8. pkg
 
-## Build from source
+## 9.4. Build from source
 
 
 pacman -Ql 本地 ; pacman -Fl 仓库
 
 http://docs.brew.sh/Interesting-Taps-&-Forks.html
 
-# 11. Hardware
+# 10. Hardware
 
-## 11.1. CPU
+## 10.1. CPU
 
-### 11.1.2. flags
+### 10.1.1. flags
 
-## 11.2. GPU
+## 10.2. GPU
 
-## 11.3. PCI Bus
+## 10.3. PCI Bus
 
-### 11.3.1. list
+### 10.3.1. list
 
-### 11.3.2. driver attached
+### 10.3.2. driver attached
 
-## 11.4. USB Bus
+## 10.4. USB Bus
 
-### 11.4.1. list
+### 10.4.1. list
 
-## 11.5. Bluetooth and WiFi
+## 10.5. Bluetooth and WiFi
 
-## 11.6. Storage
+## 10.6. Storage
 
-## 11.7. Benchmark
+## 10.7. Benchmark
 
-# 12. Kernel and modules
+# 11. Kernel and modules
 
-## 12.1. Kernel
+## 11.1. Kernel
 
-## 12.2. Kernel modules
+## 11.2. Kernel modules
 
-### 12.2.1. list modules
+### 11.2.1. list modules
 
 Linux
 
@@ -383,64 +400,64 @@ macOS:
 
 Windows:
 
-# 13. System service
+# 12. System service
 
-## 13.1. List and Status
+## 12.1. List and Status
 
-### 13.1.2. Linux initrc
+### 12.1.1. Linux initrc
 
-### 13.1.3. Linux systemd
+### 12.1.2. Linux systemd
 
-### 13.1.4. Windows
+### 12.1.3. Windows
 
-### 13.1.5. macOS
+### 12.1.4. macOS
 
-### 13.1.6. FreeBSD
+### 12.1.5. FreeBSD
 
-## 13.2. Enable/Disable
+## 12.2. Enable/Disable
 
-### 13.2.1. Linux initrc
+### 12.2.1. Linux initrc
 
-### 13.2.2. Linux systemd
+### 12.2.2. Linux systemd
 
-### 13.2.3. Windows
+### 12.2.3. Windows
 
-### 13.2.4. macOS
+### 12.2.4. macOS
 
-### 13.2.5. FreeBSD
+### 12.2.5. FreeBSD
 
-## 13.3. Start/Stop
+## 12.3. Start/Stop
 
-### 13.3.1. Linux initrc
+### 12.3.1. Linux initrc
 
-### 13.3.2. Linux systemd
+### 12.3.2. Linux systemd
 
-### 13.3.3. Windows
+### 12.3.3. Windows
 
-### 13.3.4. macOS
+### 12.3.4. macOS
 
-### 13.3.5. FreeBSD
+### 12.3.5. FreeBSD
 
-## 13.4. Create/Delete
+## 12.4. Create/Delete
 
-### 13.4.1. Linux initrc
+### 12.4.1. Linux initrc
 
-### 13.4.2. Linux systemd
+### 12.4.2. Linux systemd
 
-### 13.4.3. Windows
+### 12.4.3. Windows
 
-### 13.4.4. macOS
+### 12.4.4. macOS
 
-### 13.4.5. FreeBSD
+### 12.4.5. FreeBSD
 
-## 13.5. Edit/Modify
+## 12.5. Edit/Modify
 
-### 13.5.1. Linux initrc
+### 12.5.1. Linux initrc
 
-### 13.5.2. Linux systemd
+### 12.5.2. Linux systemd
 
-### 13.5.3. Windows
+### 12.5.3. Windows
 
-### 13.5.4. macOS
+### 12.5.4. macOS
 
-### 13.5.5. FreeBSD
+### 12.5.5. FreeBSD
