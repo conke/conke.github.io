@@ -127,16 +127,22 @@ pw group mod group_name -m user_name
 
 ## 1.2. Default shell (login shell)
 
-- FreeBSD/macOS
+- Unix-like通用方式
 
 ```bash
-chpass -s /usr/loca/bin/bash $user
+chsh -s /usr/loca/bin/bash $USER
 ```
 
-- Linux -> PowerShell
+- macOS/FreeBSD特有方式
 
 ```bash
-usermod -s /usr/bin/powershell $user
+chpass -s /usr/loca/bin/bash $USER
+```
+
+- Linux特有方式
+
+```bash
+usermod -s /usr/bin/powershell $USER
 ```
 
 ## 1.3. CLI: Linux vs BSD
