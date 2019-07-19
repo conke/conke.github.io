@@ -101,6 +101,7 @@ date
 
 如果时间日期不准确，则需要用下面的命令修正：
 ```bash
+timedatectl set-timezone Asia/Shanghai
 timedatectl set-ntp true
 timedatectl status
 date
@@ -150,7 +151,7 @@ pacman -Sy
 
 No.|Type|Size|Comments
 ---|----|----|------
-1|EFI System|128M|DOS分区方式不需要创建该分区
+1|EFI System|300M|DOS分区方式不需要创建该分区
 2|Linux swap|RAM size x 2| 推荐大小为实际物理内存的2倍
 3|Linux filesystem|(剩余大小)|
 
@@ -173,7 +174,7 @@ fdisk -l /dev/sda
 
 ### 2.6. 创建文件系统（即格式化）
 ```bash
-mkfs.vfat -F 32 -n EFI /dev/sda1 # DOS分区方式不需要执行该步骤
+mkfs.vfat -F 32 -n ESP /dev/sda1 # DOS分区方式不需要执行该步骤
 mkswap -L SWAP /dev/sda2
 mkfs.ext4 -L ROOT /dev/sda3
 ```
@@ -197,7 +198,7 @@ mount ROOT分区到和EFI分区：
 ```bash
 mount LABEL=ROOT /mnt
 mkdir -p /mnt/boot/efi # DOS分区方式不需要执行这条及下一条命令
-mount LABEL=EFI /mnt/boot/efi
+mount LABEL=ESP /mnt/boot/efi
 ```
 
 Double check:
