@@ -265,7 +265,7 @@ systemctl enable sshd syslog-ng@default dhcpcd
 
 Test:
 ```bash
-systemctl list-unit-files | grep sshd # or syslog-ng/dhcpcd
+for s in ssh syslog dhcp; do systemctl | grep $s; done
 ```
 
 ### 2.11. 设置root用户密码
@@ -362,37 +362,38 @@ Test:
 ssh $u@IP pwd # IP地址可用"ip addr"命令查看
 ```
 
-安装sudo
+### 3.3. SSH登录
+从另一台装有SSH客户段的机器（PC/虚拟机/平板均可）上用如下命令登录本机。其中，myname为你的用户名；其中IP为上面开始时查看到的IP地址，如果已忘记可用"ip addr"命令重新查看。
 ```bash
-pacman -S sudo
+ssh USER@IP
+su -
+```
+
+安装sudo和vim
+```bash
+pacman -S sudo vim
 ```
 
 开启wheel组的权限：
 ```bash
-nano /etc/sudoers
-```
-然后找到以“%wheel”开头并包含“NOPASSWD”的那一行，然后去掉行首的”#”，保存退出。其中NOPASSWD表示执行sudo时不会提示输入密码。
-Test:
-```bash
-su - $u
-sudo ls
-exit
+visudo
 ```
 
-### 3.3. SSH登录（推荐，非必须）
-从另一台装有SSH客户段的机器（PC/虚拟机/平板均可）上用如下命令登录本机。其中，myname为你的用户名；其中IP为上面开始时查看到的IP地址，如果已忘记可用"ip addr"命令重新查看。
+然后找到以“%wheel”开头的那一行，去掉行首的”#”，保存退出。
+<!--其中NOPASSWD表示执行sudo时不会提示输入密码。-->
+
 ```bash
-ssh myname@IP
-sudo su -
+exit
+sudo ls
 ```
 
 ### 3.4. 安装bash completion
 
 ### 3.5. 设置hostname
 ```bash
-hn=myhostname
-hostnamectl set-hostname $hn
-sed -i "s/\(^127.0.0.1.*localhost$\)/\1 $hn/" /etc/hosts
+hn=MY_HOSTNAME
+sudo hostnamectl set-hostname $hn
+sudo sed -i "s/\(^127.0.0.1.*localhost$\)/\1 $hn/" /etc/hosts
 ```
 
 Test:
@@ -403,9 +404,8 @@ ping $hn
 
 ### 3.6. 安装编辑器
 ```bash
-pacman -S vim emacs
-rm /bin/vi
-cp /usr/bin/vim /bin/vi
+sudo pacman -S vim emacs
+sudo ln -svf /usr/bin/vim /bin/vi
 ```
 
 Test:
@@ -414,10 +414,9 @@ vi
 emacs
 ```
 
-
 ### 3.7. 安装常用开发工具
 ```bash
-pacman -S base-devel git
+sudo pacman -S base-devel git
 ```
 
 Test:
@@ -427,13 +426,6 @@ git
 ```
 
 ### 3.8. 安装yaourt
-回到普通用户模式：
-```bash
-exit
-```
-
-Test: 注意提示符从“#”变回了“$”！
-
 
 ```bash
 git clone https://aur.archlinux.org/package-query.git
@@ -461,7 +453,7 @@ AUR包太丰富了，比Ubuntu还丰富，但很多repo需要翻墙才能下载
 Install Xorg
 
 ```bash
-pacman -S xorg xorg-xinit xorg-twm xterm
+sudo pacman -S xorg xorg-xinit xorg-twm xterm
 ```
 
 double check:
@@ -475,13 +467,13 @@ startx
 install Gnome
 
 ```bash
-pacman -S gnome gnome-extra gnome-tweak-tool
+sudo pacman -S gnome gnome-extra gnome-tweak-tool
 ```
 
 systemd services
 
 ```bash
-systemctl enable gdm NetworkManager
+sudo systemctl enable gdm NetworkManager
 ```
 
 reboot (optional)
@@ -495,7 +487,7 @@ TODO
 ### 4.4. 安装open-vm-tools（仅限于VMWare上安装ArchLinux）
 
 ```bash
-pacman -S gtkmm open-vm-tools
+sudo pacman -S gtkmm open-vm-tools
 ```
 
 在当前目录下新建一.service文件，比如取名为hgfs.service，内容如下
@@ -520,18 +512,18 @@ WantedBy=multi-user.target
 然后启动hgfs服务:
 
 ```bash
-mkdir -p /mnt/hgfs
-cp -v hgfs.service /etc/systemd/system/
-systemctl enable hgfs
+sudo mkdir -p /mnt/hgfs
+sudo cp -v hgfs.service /etc/systemd/system/
+sudo systemctl enable hgfs
 ```
 
 Test:
 
 ```bash
-systemctl start hgfs
+sudo systemctl start hgfs
 ls /mnt/hgfs
 ```
 
 ```bash
-sed -i 's/^#\(Waylang\)\1/' /etc/gdm/custom.conf
+sudo sed -i 's/^#\(Wayland\)/\1/' /etc/gdm/custom.conf
 ```
