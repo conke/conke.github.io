@@ -114,7 +114,7 @@ systemctl start sshd
 passwd
 ```
 
-Double check:
+Test:
 ```bash
 ssh localhost pwd
 ip addr # 请记住该IP，后面将有数次操作均需要用到它。
@@ -135,7 +135,7 @@ cp -v /etc/pacman.d/mirrorlist{,.orig}
 sed -n '/China/{p;n;p}' /etc/pacman.d/mirrorlist.orig > /etc/pacman.d/mirrorlist
 ````
 
-Double check:
+Test:
 ```bash
 cat /etc/pacman.d/mirrorlist
 ```
@@ -166,7 +166,7 @@ cfdisk /dev/sda
 GPT分区结果应该如下所示：
 ![part](/res/archlinux/part.png)
 
-Double check:
+Test:
 ```bash
 fdisk -l /dev/sda
 ```
@@ -179,7 +179,7 @@ mkswap -L SWAP /dev/sda2
 mkfs.ext4 -L ROOT /dev/sda3
 ```
 
-Double check:
+Test:
 ```bash
 blkid
 ```
@@ -201,7 +201,7 @@ mkdir -p /mnt/boot/efi # DOS分区方式不需要执行这条及下一条命令
 mount LABEL=ESP /mnt/boot/efi
 ```
 
-Double check:
+Test:
 ```bash
 mount
 ```
@@ -213,7 +213,7 @@ mount
 pacstrap /mnt base
 ```
 
-Double check:
+Test:
 ```bash
 ls /mnt
 ```
@@ -225,7 +225,7 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 ```
 genfstab工具确实方便，我打算为Gentoo写一个 :smile:
 
-Double check:
+Test:
 ```bash
 cat /mnt/etc/fstab
 ```
@@ -235,7 +235,7 @@ cat /mnt/etc/fstab
 arch-chroot /mnt
 ```
 
-Double check:
+Test:
 ```bash
 mount
 ```
@@ -251,7 +251,7 @@ locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 ```
 
-Double check:
+Test:
 ```bash
 locale
 cat /etc/locale.conf
@@ -260,10 +260,10 @@ cat /etc/locale.conf
 ### 2.10. 安装必备的service
 ```bash
 pacman -S openssh syslog-ng
-systemctl enable sshd syslog-ng dhcpcd
+systemctl enable sshd syslog-ng@default dhcpcd
 ```
 
-Double check:
+Test:
 ```bash
 systemctl list-unit-files | grep sshd # or syslog-ng/dhcpcd
 ```
@@ -274,7 +274,7 @@ systemctl list-unit-files | grep sshd # or syslog-ng/dhcpcd
 passwd
 ```
 
-Double check:
+Test:
 ```bash
 ssh localhost pwd
 ```
@@ -284,7 +284,7 @@ ssh localhost pwd
 mkinitcpio -p linux
 ```
 
-Double check:
+Test:
 ```bash
 ???
 ```
@@ -296,7 +296,7 @@ grub-install /dev/sda # FIXME
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-Double check:
+Test:
 ```bash
 ls /boot/grub
 ls /boot/efi
@@ -357,7 +357,7 @@ useradd -g $g -G wheel -c 'Conke Hu' -m $u
 passwd $u
 ```
 
-Double check:
+Test:
 ```bash
 ssh $u@IP pwd # IP地址可用"ip addr"命令查看
 ```
@@ -372,7 +372,7 @@ pacman -S sudo
 nano /etc/sudoers
 ```
 然后找到以“%wheel”开头并包含“NOPASSWD”的那一行，然后去掉行首的”#”，保存退出。其中NOPASSWD表示执行sudo时不会提示输入密码。
-Double check:
+Test:
 ```bash
 su - $u
 sudo ls
@@ -395,7 +395,7 @@ hostnamectl set-hostname $hn
 sed -i "s/\(^127.0.0.1.*localhost$\)/\1 $hn/" /etc/hosts
 ```
 
-Double check:
+Test:
 ```bash
 hostname
 ping $hn
@@ -408,7 +408,7 @@ rm /bin/vi
 cp /usr/bin/vim /bin/vi
 ```
 
-Double check:
+Test:
 ```
 vi
 emacs
@@ -420,7 +420,7 @@ emacs
 pacman -S base-devel git
 ```
 
-Double check:
+Test:
 ```bash
 gcc -v
 git
@@ -432,7 +432,7 @@ git
 exit
 ```
 
-Double check: 注意提示符从“#”变回了“$”！
+Test: 注意提示符从“#”变回了“$”！
 
 
 ```bash
@@ -445,7 +445,7 @@ cd yaourt
 makepkg -si
 ```
 
-Double check: 用yaourt装一个小工具
+Test: 用yaourt装一个小工具
 ```bash
 yaourt tree
 ```
@@ -525,7 +525,7 @@ cp -v hgfs.service /etc/systemd/system/
 systemctl enable hgfs
 ```
 
-Double check:
+Test:
 
 ```bash
 systemctl start hgfs
