@@ -1,0 +1,23 @@
+---
+layout: post
+title: "editors"
+date: "2019-08-01 17:54:22 +0800"
+---
+
+No. | Function | NotePad++ | VIM | VS Code | IDEA | Xcode
+----|----------|-----------|-----|---------|------|------
+  1 | 复制当前行 | Ctrl-d | yy |
+  2 | 删除当前行 | Ctrl-l | dd |
+  3 | 合并行 | Ctrl-j | Shift-j |
+  4 | 上/下移当前行 | Ctrl-Shift-Up/Down | ？|
+  5 | 函数自动完成 | Ctrl-Space | Ctrl-p |
+  6 | 查找 | Ctrl-F | / |
+  7 | 查找下/上一个  | F3/Shift-F3 | n/N |
+  8 | 保存文件 | Ctrl-S | :w |
+  9 | 撤销 | Ctrl-z | u |
+ 10 | 恢复 | Ctrl-y | Ctrl-r |
+ 11 | 剪切 | Ctrl-X  | x |
+ 12 | 复制 | Ctrl-C  | y |
+ 13 | 全选 | Ctrl-A |  |
+ 14 | 行选择 | ? | Shift-v |
+ 15 | 列编辑 | Alt-C | Ctrl-v |
